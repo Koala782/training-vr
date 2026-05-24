@@ -9,7 +9,41 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Training.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Training" startnode="49" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="25F4A087-3B1F-49A5-9A96-B96770850D06" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage {
+<tw-storydata name="Training" startnode="49" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="25F4A087-3B1F-49A5-9A96-B96770850D06" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.debug-nav {
+  position: fixed;
+
+  top: 16px;
+  right: 16px;
+
+  z-index: 9999;
+
+  display: flex;
+  gap: 10px;
+}
+
+.debug-nav tw-link {
+  padding: 8px 14px;
+
+  background: #2a3544;
+
+  border: 1px solid #5f7c99;
+
+  border-radius: 10px;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 14px;
+}
+
+.debug-nav tw-link:hover {
+  background: #3a4b60;
+}
+
+
+
+tw-passage {
   width: 100vw;
   max-width: none !important;
 
@@ -129,14 +163,50 @@ tw-story {
 }
 
 .progress-bar {
+  position: relative;
+
   width: 70%;
   max-width: 900px;
-  height: 6px;
+
+  height: 8px;
+
   margin: 0 auto 12px auto;
+
   border-radius: 999px;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
+
+  overflow: visible;
+}
+
+.progress-bar::before {
+  content: "Fortschritt";
+
+  position: absolute;
+
+  left: -75px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #8fa8c4;
+
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.progress-bar::after {
+  content: "100%";
+
+  position: absolute;
+
+  right: -40px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #8fa8c4;
+
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .progress-0 {
@@ -147,8 +217,8 @@ tw-story {
   background: linear-gradient(
     90deg,
     #8fa8c4 0%,
-    #8fa8c4 20%,
-    #2a3544 20%,
+    #8fa8c4 10%,
+    #2a3544 10%,
     #2a3544 100%
   );
 }
@@ -211,9 +281,8 @@ tw-story {
     #8fa8c4 100%
   );
 }
-  </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="250,625" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
-
-&lt;div class=&quot;scene-text&quot;&gt; Der Tag beginnt
+  </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Start" tags="" position="250,575" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Der Tag beginnt. Es ist kurz vor Arbeitsbeginn und Max hat noch einige Meter vor sich.
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
@@ -222,14 +291,13 @@ tw-story {
   &lt;div class=&quot;choice-overlay&quot;&gt;
     [[Nächstes Panel]]
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Kaffee holen" tags="" position="775,825" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
-
-&lt;div class=&quot;scene-text&quot;&gt; Max sitzt nun mit seinem Kaffee am Tisch.
-Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
-&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Kaffee holen" tags="" position="775,825" size="100,100">&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P3.png&quot;&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Max sitzt nun mit seinem Kaffee am Tisch. Er öffnet das E-Mail Programm.
+&lt;/div&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
  [[E-Mail Programm öffnen]] 
@@ -238,13 +306,13 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
 
 
 
-</tw-passagedata><tw-passagedata pid="3" name="Tisch aufräumen" tags="" position="725,425" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
-
-&lt;div class=&quot;scene-text&quot;&gt; Der Tisch sieht jetzt schon viel besser aus. Jetzt kann sich Max ganz der Arbeit widmen.
-&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="3" name="Tisch aufräumen" tags="" position="725,400" size="100,100">&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P2.png&quot;&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Der Tisch sieht jetzt schon viel besser aus. Jetzt kann sich Max ganz der Arbeit widmen.
+&lt;/div&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Mail-Programm öffnen]]
@@ -253,15 +321,16 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
 
 
 
-</tw-passagedata><tw-passagedata pid="4" name="IT kontaktieren" tags="" position="1125,275" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="4" name="IT kontaktieren" tags="" position="1125,275" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max ist sich unsicher und kontakiert direkt die IT.
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P6.png&quot;&gt;
-&lt;div class=&quot;scene-text&quot;&gt; Max Selbstbewusstsein steigt, da er nicht auf den Angriff reingefallen ist. Er kann nun zum ersten Kundentermin
+&lt;div class=&quot;scene-text&quot;&gt; Max fühlt sich betsätigt, da er nicht auf den Angriff reingefallen ist. Er kann nun zum ersten Kundentermin
 &lt;/div&gt;
+
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Zum Kundentermin]]
   &lt;/div&gt;
@@ -272,15 +341,16 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
 
 
 
-</tw-passagedata><tw-passagedata pid="5" name="E-Mail Programm öffnen" tags="" position="875,625" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="5" name="E-Mail Programm öffnen" tags="" position="875,625" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max öffnet sein E-Mail Programm. Er hat den großteil der Mails beantwortet, jedoch sticht ihm eine besonders ins Auge. 
+&lt;div class=&quot;scene-text&quot;&gt; Max öffnet sein E-Mail Programm. Er hat den Großteil der Mails beantwortet, jedoch sticht ihm eine besonders ins Auge. 
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P4.png&quot;&gt;
-&lt;div class=&quot;scene-text&quot;&gt; Max hat gleich einen Kundentermin. Wie soll Max sich entscheiden?
+&lt;div class=&quot;scene-text&quot;&gt;Die Zeit drängt. Max hat gleich einen Kundentermin. Wie soll er sich entscheiden?
 &lt;/div&gt;
+
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Daten eingeben]]
 [[Intranet öffnen]] 
@@ -293,9 +363,9 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
 
 
 
-</tw-passagedata><tw-passagedata pid="6" name="Intranet öffnen" tags="" position="1125,500" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="6" name="Intranet öffnen" tags="" position="1125,500" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max öffnet die interne Webseite und schaut nach auffäligen Meldungen.
+&lt;div class=&quot;scene-text&quot;&gt; Max öffnet die interne Webseite und schaut nach auffälligen Meldungen.
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
@@ -311,15 +381,16 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
 
 
 
-</tw-passagedata><tw-passagedata pid="7" name="Daten eingeben" tags="" position="1075,700" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="7" name="Daten eingeben" tags="" position="1075,700" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max will nichts riskieren und gibt seine Daten ein.
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P7.png&quot;&gt;
-&lt;div class=&quot;scene-text&quot;&gt; Nachdem er die Bestätigung bekommen hat geht Max nun zu seinem ersten Kundentermin.
+&lt;div class=&quot;scene-text&quot;&gt; Nachdem er die Bestätigung erhalten hat geht Max zu seinem ersten Kundentermin.
 &lt;/div&gt;
+
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Zum Termin]]
   &lt;/div&gt;
@@ -330,10 +401,9 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
 
 
 
-</tw-passagedata><tw-passagedata pid="8" name="Zum Kundentermin" tags="" position="1300,350" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="8" name="Zum Kundentermin" tags="" position="1300,350" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max kommt zurück von seinem Kundentermin
-&lt;/div&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Der Kundentermin lief gut. Max geht wieder zu seinem Arbeitsplatz &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P12_1.png&quot;&gt;
@@ -343,9 +413,9 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
 [[Benutzer nicht bestätigen]]
   &lt;/div&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="9" name="Zum Termin" tags="" position="1275,675" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="9" name="Zum Termin" tags="" position="1275,675" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max kommt vom ersten Kundentermin zurück
+&lt;div class=&quot;scene-text&quot;&gt;  Der Kundentermin lief gut. Max geht wieder zu seinem Arbeitsplatz.
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
@@ -356,7 +426,7 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
   &lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="10" name="Code weitergeben" tags="" position="1775,625" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="10" name="Code weitergeben" tags="" position="1775,625" size="100,100">&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max gibt den Code weiter und begibt sich zu seinem zweiten Meeting.
 &lt;/div&gt;
@@ -365,29 +435,28 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
  &lt;img src=&quot;Comic_Panels/P9_1.png&quot;&gt;
 &lt;div class=&quot;scene-text&quot;&gt; Max ist mitten im gut laufendem Meeting. Es wäre unprofessionell dieses jetzt zu beenden.
 &lt;/div&gt;
+
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Meeting forsetzen]]
 [[Meeting unterbrechen]]
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="11" name="Weiter mit dem Telefonat" tags="" position="1425,675" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="11" name="Weiter mit dem Telefonat" tags="" position="1425,675" size="100,100">&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Das Telefonat geht weiter:
 &lt;/div&gt;
-
 &lt;div class=&quot;comic-panel&quot;&gt;
-  &lt;img src=&quot;Comic_Panels/P8_2.png&quot;&gt;
-&lt;div class=&quot;scene-text&quot;&gt; Wie soll Max sich entscheiden?
-&lt;/div&gt;
+  &lt;img src=&quot;Comic_Panels/P8_2.png&quot;&gt;  
   &lt;div class=&quot;choice-overlay&quot;&gt;
+
 [[Code weitergeben]] 
 [[Nachhaken]] 
   &lt;/div&gt;
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="12" name="Nachhaken" tags="" position="1600,750" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="12" name="Nachhaken" tags="" position="1575,750" size="100,100">&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Bevor Max richtig nachfragen kann, spricht der IT-Mitarbeiter weiter:
 &lt;/div&gt;
@@ -396,14 +465,18 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
   &lt;img src=&quot;Comic_Panels/P8_3.png&quot;&gt;
 &lt;div class=&quot;scene-text&quot;&gt; Wenn er sogar den nächsten Termin kennt, muss er ja schon Zugriff auf interne Daten haben. 
 &lt;/div&gt;
+
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Code weitergeben]] 
-[[Misstrauisch bleiben und Identität prüfen]]
+[[Code nicht weitergeben -&gt;Misstrauisch bleiben]]
 &lt;/div&gt;
 
 
 
-</tw-passagedata><tw-passagedata pid="13" name="Misstrauisch bleiben und Identität prüfen" tags="" position="2050,300" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="13" name="Misstrauisch bleiben" tags="" position="2050,300" size="100,100">&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Max ist immer noch skeptisch und prüft die Identität des Anrufers.
+&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P8_4.png&quot;&gt;
@@ -416,7 +489,7 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="14" name="Meeting forsetzen" tags="" position="2000,750" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="14" name="Meeting forsetzen" tags="" position="2000,750" size="100,100">&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max setzt das Meeting fort. Währenddessen bahnt sich eine Katastrophe an.
 &lt;/div&gt;
@@ -425,30 +498,32 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
   &lt;img src=&quot;Comic_Panels/P9_2.png&quot;&gt;
 &lt;div class=&quot;scene-text&quot;&gt; Max wird sich langsam bewusst, dass er einen großen Fehler begangen hat.
 &lt;/div&gt;
+
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Weiter]]
   &lt;/div&gt;
 &lt;/div&gt;
 
  
-</tw-passagedata><tw-passagedata pid="15" name="Meeting unterbrechen" tags="" position="2050,450" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="15" name="Meeting unterbrechen" tags="" position="2050,450" size="100,100">&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max unterbricht sofot das Meeting. So eine Warnung darf nicht ignoriert werden. &lt;/div&gt;
-
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P10.png&quot;&gt;
-&lt;div class=&quot;scene-text&quot;&gt; Max ist froh gerade noch rechtzeitig reagiert zu haben. Max hat nicht alles perfekt gemacht aber durch das Unterbrechen des Meetings konnte die IT größere Schäden verhindern. &lt;/div&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max ist froh gerade noch rechtzeitig reagiert zu haben. Max hat nicht alles perfekt gemacht ,aber durch das sofortige Unterbrechen des Meetings konnte die IT größere Schäden verhindern. &lt;/div&gt;
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Tag beenden]]
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="16" name="Weiter" tags="" position="2200,750" size="100,100">
+</tw-passagedata><tw-passagedata pid="16" name="Weiter" tags="" position="2200,750" size="100,100">&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Die Folgen sind gravierend: Kunden, Mitarbeitende und die gesamte Bank sind nun von den Konsequenzen betroffen. &lt;/div&gt;
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P9_3.png&quot;&gt;
-
+&lt;/div&gt;
 
  &lt;div class=&quot;choice-overlay&quot;&gt;
-[[Was ist passiert?]] &lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Benutzer bestätigen" tags="" position="1500,450" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+[[Was ist passiert?]] &lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Benutzer bestätigen" tags="" position="1550,375" size="100,100">&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max bestätigt den Benutzer. Das Telefonat geht weiter:
 &lt;/div&gt;
@@ -458,48 +533,52 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Code weitergeben]]
-[[Misstrauisch bleiben und Identität prüfen]] 
+[[Code nicht weitergeben-&gt;Misstrauisch bleiben]]
   &lt;/div&gt;
 &lt;/div&gt;
 
  
 
  
-</tw-passagedata><tw-passagedata pid="18" name="Benutzer nicht bestätigen" tags="" position="1500,275" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="18" name="Benutzer nicht bestätigen" tags="" position="1500,225" size="100,100">&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max bleibt skeptisch und bestätigt nicht seinen Benutzernamen, stattdessen fragt er nach der Identität des Anrufers.
+&lt;div class=&quot;scene-text&quot;&gt; Max bleibt zurückhaltend und bestätigt nicht seinen Benutzernamen.
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P13.png&quot;&gt;
-
   &lt;div class=&quot;choice-overlay&quot;&gt;
 (if: $startwahl is &quot;kaffee&quot; or $startwahl is &quot;email&quot;)[
 [[Telefonat weiterführen]]
 ]
 (else:)[
-[[Misstrauisch bleiben und Identität prüfen]] 
+[[Ablehnen -&gt;Misstrauisch bleiben]]          [[Benutzer bestätigen]] 
 ]
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="19" name="Telefonat weiterführen" tags="" position="1700,75" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="19" name="Telefonat weiterführen" tags="" position="1700,75" size="100,100">&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Das Telefonat geht weiter.
+&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P8_3.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Code weitergeben]] 
-[[Misstrauisch bleiben und Identität prüfen]] 
+[[Code nicht weitergeben -&gt;Misstrauisch bleiben]] 
   &lt;/div&gt;
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="20" name="Mail-Programm öffnen" tags="" position="875,250" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="20" name="Mail-Programm öffnen" tags="" position="875,250" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Nachdem Max die sensiblen Dokumente aufgeräumt und weggesperrt hat setzt er sich an seinen Tisch und öffnet sein Mail-Programm.
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
  &lt;img src=&quot;Comic_Panels/P11.png&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt;Die Zeit drängt. Max hat gleich einen Kundentermin. Wie soll er sich entscheiden?
+&lt;/div&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Intranet öffnen]] 
@@ -511,9 +590,9 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
 
 
 
-</tw-passagedata><tw-passagedata pid="21" name="Nächstes Panel" tags="" position="400,625" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="21" name="Nächstes Panel" tags="" position="400,700" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Der Tag beginnt
+&lt;div class=&quot;scene-text&quot;&gt;Max bleibt misstrauisch und verweigert dem unbekannten Mann den Zutritt zur Filiale. Doch der Mann gibt nicht auf.
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
@@ -522,12 +601,13 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
   &lt;div class=&quot;choice-overlay&quot;&gt;
     [[Zurück zu Max]] 
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Zurück zu Max" tags="" position="575,600" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Zurück zu Max" tags="" position="550,575" size="100,100">&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
  &lt;img src=&quot;Comic_Panels/P1_3.png&quot;&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max hat es gerade noch rechtzeitig geschafft:  Er ist müde, da er noch keinen Kaffee hatte. Der Tisch ist noch unaufgeräumt vom Vortag. In 10 Minuten hat Max seinen ersten Termin und auch noch unbeantwortete Mails von gestern &lt;/div&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max hat es gerade noch rechtzeitig geschafft.
+Er ist müde, da er noch keinen Kaffee hatte und sein Arbeitsplatz ist vom Vortag noch unaufgeräumt. In nur zehn Minuten beginnt bereits sein erster Termin, außerdem warten noch unbeantwortete E-Mails von gestern auf ihn. &lt;/div&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
 (link: &quot;Kaffee holen&quot;)[
@@ -551,15 +631,16 @@ Er öffnet das E-Mail Programm. Einfügen von P3 (ES FEHLT DER KAFFEEBECHER)
 
 </tw-passagedata><tw-passagedata pid="23" name="Tag beenden" tags="" position="2300,350" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Rückblick Tag 1&lt;/h3&gt;Der ereignisereiche Tag endet ohne größere Schäden. Dieser Tag hat die Themen Tailgating, Clean Desk Policy und Meldung von Vorfällen behandelt.
 
-&lt;br&gt;&lt;br&gt;  &lt;b&gt;Tailgating&lt;/b&gt;&lt;br&gt;Zu Beginn wollte ein unbekannter Mann das Gebäude betreten. Max selbst hat ihn nicht hereingelassen. Dennoch gelangte der Mann durch sogenanntes Tailgating in das Gebäude – also durch unauffälliges Mitlaufen hinter einem Mitarbeitenden.
+&lt;br&gt;&lt;br&gt;  &lt;b&gt;Tailgating&lt;/b&gt;&lt;br&gt;Zu Beginn wollte ein unbekannter Mann das Gebäude betreten. Max selbst hat ihn nicht hereingelassen. Dennoch gelangte der Mann durch sogenanntes Tailgating in das Gebäude – also durch unauffälliges Mitlaufen hinter einem Mitarbeitenden. &lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;img src=&quot;Comic_Panels/P58.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
 
-&lt;br&gt;&lt;br&gt;  &lt;b&gt;Clean Desk Policy&lt;/b&gt;&lt;br&gt; Falls du bei der ersten Entscheidung den Tisch aufgeräumt hast, dann hast du richtig reagiert. Passwörter, Kundendaten oder sensible Informationen sollten niemals offen am Arbeitsplatz liegen bleiben.
+&lt;br&gt;&lt;br&gt;  &lt;b&gt;Clean Desk Policy&lt;/b&gt;&lt;br&gt; Falls du bei der ersten Entscheidung den Tisch aufgeräumt hast, dann hast du richtig reagiert. Passwörter, Kundendaten oder sensible Informationen sollten niemals offen am Arbeitsplatz liegen bleiben. Außerdem solltest du jedes mal wenn du den Platz verlässt deinen Bildschrim sperren. Die Tastenkombination hierfür lautet: Windows-Taste ⊞ + L. 
 
 Ist dir der Mann im Hintergrund aufgefallen, der an deinem Arbeitsplatz vorbeigelaufen ist?
 &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P51.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
 Dabei handelt es sich um denselben Mann, der sich zuvor unbefugten Zugang zum Gebäude verschafft hat. Falls dein Arbeitsplatz aufgeräumt war, konnte er keine zusätzlichen Informationen sammeln. 
-Falls du jedoch „Kaffee holen“ oder „Mails öffnen“ gewählt hast, konnte der Angreifer sensible Informationen einsehen – beispielsweise deine E-Mail-Adresse (max.mueller@vrbank.de) oder sogar Hinweise auf deinen nächsten Baufinanzierungstermin. Solche Informationen können später genutzt werden, um glaubwürdiger aufzutreten und mehr Druck auszuüben.. 
+Falls du jedoch „Kaffee holen“ oder „Mails öffnen“ gewählt hast, konnte der Angreifer sensible Informationen einsehen – beispielsweise deine E-Mail-Adresse (max.mueller@vrbank.de) oder sogar Hinweise auf deinen nächsten Baufinanzierungstermin. Solche Informationen können später genutzt werden, um glaubwürdiger aufzutreten und mehr Druck auszuüben.
 
 &lt;br&gt;&lt;br&gt; &lt;b&gt;Vorfallsmeldung&lt;/b&gt;&lt;br&gt; Wenn du die verdächtige Sicherheits-E-Mail gemeldet hast, hast du möglicherweise bereits den Meldebutton gesehen. 
 Falls du deine Daten eingegeben hast, wurde dieses Panel nicht angezeigt:
@@ -567,7 +648,7 @@ Falls du deine Daten eingegeben hast, wurde dieses Panel nicht angezeigt:
 &lt;img src=&quot;Comic_Panels/P50.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
 Ein solcher Meldebutton wird zukünftig auch in eurem E-Mail-Programm verfügbar sein.
 &lt;br&gt;&lt;br&gt;
-Als letzter Punkt: Eure IT wird euch nie anrufen und nach Daten fragen. Bei solchen Anrufen sollten sofort Alarmglocken angehen. Am besten meldet ihr den Vorfall dann der richtigen IT. Wenn du den Authentifizierungscode weitergegeben hattest, war es wichtig das Meeting zu unterbrechen, da es die letzte Chance war den Angriff zu unterbinden. Lieber zu spät melden als nie.
+Als letzter Punkt: Eure IT wird euch nie anrufen und nach Authentifizierungsdaten fragen. Bei solchen Anrufen sollten sofort Alarmglocken angehen. Am besten meldet ihr den Vorfall dann der richtigen IT. Wenn du den Authentifizierungscode weitergegeben hattest, war es wichtig das Meeting zu unterbrechen, da es die letzte Chance war den Angriff zu unterbinden. Lieber zu spät melden als nie.
 &lt;div style=&quot;
 background-color:#e8eef5;
 border-left:5px solid #2b5c88;
@@ -577,7 +658,7 @@ border-radius:8px;
 line-height:1.6;
 font-size:0.95em;
 color:#1f2937;
-&quot;&gt; &lt;b&gt;Wichtige Erkenntnisse:&lt;/b&gt;&lt;br&gt;&lt;br&gt; ✓ Unbekannte Personen hinterfragen&lt;br&gt; ✓ Arbeitsplatz sauber halten&lt;br&gt; ✓ Verdächtige Vorfälle melden
+&quot;&gt; &lt;b&gt;Wichtige Erkenntnisse:&lt;/b&gt;&lt;br&gt; ✓ Unbekannte Personen hinterfragen&lt;br&gt; ✓ Arbeitsplatz sauber halten&lt;br&gt; ✓ Verdächtige Vorfälle melden&lt;br&gt; ✓ Bildschrim beim Verlassen des Platzes sperren
 &lt;/div&gt;
 
 &lt;/div&gt;
@@ -585,7 +666,7 @@ color:#1f2937;
   [[Start Tag 2]] 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Start Tag 2" tags="" position="2500,350" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; TEXT
+&lt;div class=&quot;scene-text&quot;&gt; Ein neuer Tag bricht an. Max sitzt an seinem gewohnten Platz und fährt seinen PC hoch.
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
@@ -598,9 +679,9 @@ color:#1f2937;
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="25" name="Kennwort aktualisieren" tags="" position="2725,425" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="25" name="Kennwort aktualisieren" tags="" position="2725,425" size="100,100">&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; TEXT
+&lt;div class=&quot;scene-text&quot;&gt; Durch den Vorfall gestern will Max kein Risiko eingehen und aktualisert direkt sein Passwort.
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
@@ -610,9 +691,9 @@ color:#1f2937;
  [[Zeit für eine kurze Pause]]   
   &lt;/div&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="26" name="Kollegin fragen" tags="" position="2725,275" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="26" name="Kollegin fragen" tags="" position="2725,275" size="100,100">&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; TEXT
+&lt;div class=&quot;scene-text&quot;&gt; Max will sich sicher gehen und geht zu seiner Kollegin Anna um nachzufragen.
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
@@ -624,7 +705,7 @@ color:#1f2937;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="27" name="Zeit für eine kurze Pause" tags="" position="2900,350" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; TEXT
+&lt;div class=&quot;scene-text&quot;&gt; Max hat einige Sachen abgearbeitet. Er hat sich eine kleine Pause verdient,  
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
@@ -639,7 +720,7 @@ color:#1f2937;
 
 </tw-passagedata><tw-passagedata pid="28" name="Zur Kantine" tags="" position="3100,350" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; TEXT
+&lt;div class=&quot;scene-text&quot;&gt; Sie entscheiden sich für die Kantine. 
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
@@ -649,13 +730,19 @@ color:#1f2937;
 [[Zurück zum Arbeitsplatz]]
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="29" name="Spazieren" tags="" position="3100,475" size="100,100">&lt;img src=&quot;Comic_Panels/P93.png&quot; width=&quot;100%&quot;&gt;
+</tw-passagedata><tw-passagedata pid="29" name="Spazieren" tags="" position="3100,475" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
-[[Zurück zum Arbeitsplatz]]</tw-passagedata><tw-passagedata pid="30" name="Kaffeepause" tags="" position="3100,225" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
-
-&lt;div class=&quot;scene-text&quot;&gt;
-TEXT
+&lt;div class=&quot;scene-text&quot;&gt; Sie entscheiden sich kurz an die frische Luft zu gehen.
 &lt;/div&gt;
+
+&lt;div class=&quot;comic-panel&quot;&gt;
+  &lt;img src=&quot;Comic_Panels/P93.png&quot;&gt;
+
+ &lt;div class=&quot;choice-overlay&quot;&gt;
+[[Zurück zum Arbeitsplatz]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Kaffeepause" tags="" position="3100,225" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Sie gehen zusammen in die Küche und bereiten sich einen Kaffee zu. &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P91.png&quot;&gt;
@@ -668,7 +755,7 @@ TEXT
 
 </tw-passagedata><tw-passagedata pid="31" name="Zurück zum Arbeitsplatz" tags="" position="3300,350" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Der Anruf
+&lt;div class=&quot;scene-text&quot;&gt; Nach der Pause setzt sich Max zurück auf seinen Platz. Kaum hingesetzt klingelt schon das Telefon.
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
@@ -679,26 +766,35 @@ TEXT
   &lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="32" name="Telefonat fortsetzen" tags="" position="3450,350" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="32" name="Telefonat fortsetzen" tags="" position="3450,350" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Max öffnet das Konto von Herrn Weber.
+&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P17_2.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
-[[Weiter zur Identitätsprüufung]]
+[[Weiter zur Identitätsprüfung]]
   &lt;/div&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="33" name="Weiter zur Identitätsprüufung" tags="" position="3600,350" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="33" name="Weiter zur Identitätsprüfung" tags="" position="3600,350" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Bevor Max aber helfen kann, muss Herr Weber bestätigen, dass er auch wirklich Herr Weber ist. &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P17_3.png&quot;&gt;
 
-  &lt;div class=&quot;choice-overlay&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max steht unter Druck: Er will ihm unbedingt so schnell wie möglich helfen. Herr Weber könnte jede Minute mehr Geld verlieren. &lt;/div&gt;
+
+&lt;div class=&quot;choice-overlay&quot;&gt;
 [[sofort helfen-&gt; Sicherheitsfreigabe ausführen]]
 [[Basisdaten abgleichen]]
 [[Standard-Verifikation durchführen]]
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="34" name="Basisdaten abgleichen" tags="" position="3825,175" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="34" name="Basisdaten abgleichen" tags="" position="3825,175" size="100,100">&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Max entscheidet sich für den Kompromiss: Er gleicht nur die Basisdaten ab um Zeit zu sparen.  &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P18.png&quot;&gt;
@@ -709,17 +805,23 @@ TEXT
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="35" name="Standard-Verifikation durchführen" tags="" position="3800,450" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="35" name="Standard-Verifikation durchführen" tags="" position="3800,450" size="100,100">&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Max will kein Risiko eingehen und führt das Standard-Verifikationsverfahren aus.&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P18.png&quot;&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Nach den Basisdaten will Max noch das Sicherheitsmerkmal wissen.&lt;/div&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Weiter mit Sicherheitsmerkmal]]
   &lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="36" name="Weiter mit Sicherheitsmerkmal" tags="" position="3975,450" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="36" name="Weiter mit Sicherheitsmerkmal" tags="" position="3975,450" size="100,100">&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Herr Weber verliert langsam die Geduld und wirkt leicht verärgert: Aber Prozess ist Prozess und Max will den einhalten.&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P20_1.png&quot;&gt;
@@ -729,7 +831,9 @@ TEXT
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="37" name="Gespräch weiterführen" tags="" position="4125,450" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="37" name="Gespräch weiterführen" tags="" position="4125,450" size="100,100">&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Max befindet sich in einem Dilemma: Herr Weber benötigt dringend Hilfe, hat das Sicherheitsmerkmal jedoch nicht parat. Gleichzeitig möchte Max nicht von den vorgegebenen Sicherheitsprozessen abweichen.&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P20_2.png&quot;&gt;
@@ -739,51 +843,63 @@ TEXT
 [[Ausnahme machen -&gt; Sicherheitsfreigabe ausführen]]
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="38" name=" Sicherheitsfreigabe ausführen" tags="" position="4450,350" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="38" name=" Sicherheitsfreigabe ausführen" tags="" position="4450,350" size="100,100">&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Max ist sichtlich erleichtert. Er kann Herr Weber weiterhelfen.&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P22.png&quot;&gt;
 
+&lt;div class=&quot;scene-text&quot;&gt;Das nächste Dilemma: Herr Weber steht kurz davor, wieder Zugriff auf seinen Account zu erhalten. Allerdings hat er seine hinterlegte Telefonnummer nicht aktualisieren lassen. Max überlegt.&lt;/div&gt;
+
   &lt;div class=&quot;choice-overlay&quot;&gt;
-[[TAN freigeben]]
-[[keine Telefonnummer, keine TAN]]
+[[Code freigeben]]
+[[Code nicht freigeben]]
   &lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="39" name="Auf Sicherheitsmerkmal beharren" tags="" position="4325,500" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="39" name="Auf Sicherheitsmerkmal beharren" tags="" position="4325,500" size="100,100">&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Er gibt Herr Weber noch etwas Zeit. &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P21.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[ Sicherheitsfreigabe ausführen]] 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="TAN freigeben" tags="" position="4600,250" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="Code freigeben" tags="" position="4600,250" size="100,100">&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Max will unbedingt helfen und gibt den Code weiter.&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P23.png&quot;&gt;
 
+&lt;div class=&quot;scene-text&quot;&gt; Max ist geschockt. Knapp 3000€ sind schon im Ausland gelandet. Er muss schnell reagieren. Aber er will nicht, dass andere seinen Fehler mitbekommen. Deswegen überlegt er den Account selbst zu sperren. &lt;/div&gt;
+
   &lt;div class=&quot;choice-overlay&quot;&gt;
-[[Vorfall melden]]
 [[Account von Herr Weber selbst sperren]]
+[[Trotzdem melden]]
   &lt;/div&gt;
 &lt;/div&gt;
  
 
-</tw-passagedata><tw-passagedata pid="41" name="keine Telefonnummer, keine TAN" tags="" position="4600,475" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="41" name="Code nicht freigeben" tags="" position="4600,475" size="100,100">&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Max bleibt bei den Sicherheitsvorgaben und gibt den Code trotz des verärgerten Herrn Weber nicht weiter.&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P27_1.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
-[[Zwischenpanel]]
+[[Konsequent bleiben]]
   &lt;/div&gt;
 &lt;/div&gt;
 
 
 
-</tw-passagedata><tw-passagedata pid="42" name="Vorfall melden" tags="" position="4800,300" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="42" name="Trotzdem melden" tags="" position="4800,300" size="100,100">&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max nennt Details
+&lt;div class=&quot;scene-text&quot;&gt; Max fühlt sich schlecht, aber meldet es trotzdem der IT.
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
@@ -793,39 +909,59 @@ TEXT
 [[Die Konsequenzen]]
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="43" name="Account von Herr Weber selbst sperren" tags="" position="4800,150" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="43" name="Account von Herr Weber selbst sperren" tags="" position="4800,150" size="100,100">&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Max sperrt eigenständig den Account ohne den Vorfall zu melden.&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P25.png&quot;&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Der Angreifer probierts beim nächsten Mitarbeiter. Wieder mit Erfolg.&lt;/div&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Die Konsequenzen]] 
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="44" name="Die Konsequenzen" tags="" position="5150,250" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="44" name="Die Konsequenzen" tags="" position="5150,250" size="100,100">&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Der echte Herr Weber ist wütend und Max muss zu seinem Vorgesetzten.
+&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P26.png&quot;&gt;
 
-[[Wo waren die Fehler?]]</tw-passagedata><tw-passagedata pid="45" name="Zwischenpanel" tags="" position="4750,450" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
-
-&lt;div class=&quot;scene-text&quot;&gt; NEUES PANEL EINFÜGEN 27_2
 &lt;/div&gt;
+  &lt;div class=&quot;choice-overlay&quot;&gt;
+[[Wo waren die Fehler?]]
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="45" name="Konsequent bleiben" tags="" position="4750,450" size="100,100">&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Herr Weber wirkt zunehmend verärgert und legt auf.&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
-  &lt;img src=&quot;Comic_Panels/BILD.png&quot;&gt;
+  &lt;img src=&quot;Comic_Panels/P27_2.png&quot;&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Das Gespräch ging sehr abrupt zu Ende. Das verunsichert Max. Er fragt sich ob er die richtige Entscheidung getroffen hat. Max hat ein ungutes Gefühl.&lt;/div&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
-[[Vorfall der IT melden]]
+[[Telefonat melden]]
 [[Weiter arbeiten]]  
   &lt;/div&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="46" name="Vorfall der IT melden" tags="" position="5150,575" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="46" name="Telefonat melden" tags="" position="5150,575" size="100,100">&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Da ihm der Anruf merkwürdig vorkam meldet Max den Vorfall. Eine sehr gute Entscheidung:&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P29.png&quot;&gt;
 
-[[Debrief]]</tw-passagedata><tw-passagedata pid="47" name="Weiter arbeiten" tags="" position="4925,400" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;scene-text&quot;&gt;Tatsächlich handelte es sich um einen Social-Engineering-Angriff. Der falsche Herr Weber versucht anschließend, auch andere Mitarbeitende zu täuschen, doch dank Max’ Meldung sind diese nun vorbereitet und sensibilisiert. &lt;/div&gt;
+
+  &lt;div class=&quot;choice-overlay&quot;&gt;
+[[Debrief]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="Weiter arbeiten" tags="" position="4925,400" size="100,100">&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Das abrupte Ende hinterlässt bei Max ein mulmiges Gefühl, aber er ist froh den Code nicht weitergegeben zu haben. Max arbeitet weiter.&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P28_1.png&quot;&gt;
@@ -837,27 +973,30 @@ TEXT
 
 
 
-</tw-passagedata><tw-passagedata pid="48" name="Weiter zum Vorgesetzten" tags="" position="5150,425" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="48" name="Weiter zum Vorgesetzten" tags="" position="5150,425" size="100,100">&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Trotz des unguten Gefühls von Max hat er das Telefonat nicht gemeldet. Das erweist sich als großer Fehler, da es ein Social-Engineering-Angriff war. Der Angreifer gibt sich weiter als Herr Weber aus und versucht es beim nächsten Mitarbeiter: Diesmal erfolgreich. Max muss zu seinem Vorgesetzten. &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P28_2.png&quot;&gt;
 
+  &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Debrief]]
-</tw-passagedata><tw-passagedata pid="49" name="Intro" tags="" position="100,625" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="Intro" tags="" position="100,625" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;h2&gt;Willkommen zum Informationssicherheitstraining!&lt;/h2&gt; &lt;/div&gt;
+
+Warum braucht es überhaupt Schulungen?
+Der europäische Finanz- und Bankensektor gehört zu den am stärksten angegriffenen Branchen im Bereich der Cybersicherheit. Fast 40 % aller Cyberangriffe in Europa richten sich gegen diesen Sektor.
 
 Dies ist keine klassische Schulung, sondern ein interaktives, spielartiges Training.
 In diesem interaktiven Spiel übernimmst du die Rolle von Max, einem Bankmitarbeitenden, der ganz normal in seinen Arbeitstag startet.
 
-Die Geschichte spielt in einer Bankfiliale und du wirst im Verlauf immer wieder vor Entscheidungen gestellt. Deine Antworten beeinflussen den weiteren Verlauf der Handlung unf führen zu unterschiedlichen Situationen.
+Die Geschichte spielt in einer Bankfiliale und du wirst im Verlauf immer wieder vor Entscheidungen gestellt. Deine Antworten beeinflussen den weiteren Verlauf der Handlung und führen zu unterschiedlichen Situationen.
 
 Die Handlung wird im Comic-Format erzählt. Comics liest man in der folgenden Reihenfolge:
 &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P0.png&quot; width=&quot;50%&quot;&gt;
 &lt;/div&gt;
-
-Warum dieses Training?
-Der europäische Finanz- und Bankensektor gehört zu den am stärksten angegriffenen Branchen im Bereich der Cybersicherheit. Fast 40 % aller Cyberangriffe in Europa richten sich gegen diesen Sektor.
 
 Hier drunter ist der Start-Button. Viel Spaß!
 &lt;/div&gt;
@@ -871,22 +1010,24 @@ Hier drunter ist der Start-Button. Viel Spaß!
 
 Die letzte Möglichkeit, den Angriff erfolgreich zu verhindern, bestand während des Meetings. In einer solchen Situation sollte das Meeting sofort unterbrochen und der Vorfall gemeldet werden. Lieber einmal zu viel melden als einmal zu wenig.
 
-Ein weiterer Fehler war die Weitergabe des Authentifizierungscodes. Eure IT wird euch nie anrufen und nach Daten fragen. Bei solchen Anrufen sollten sofort Alarmglocken angehen. Am besten meldet ihr den Vorfall dann der richtigen IT. 
+Ein weiterer Fehler war die Weitergabe des Authentifizierungscodes. Eure IT wird euch nie anrufen und nach Authentifizierungsdaten fragen. Bei solchen Anrufen sollten sofort Alarmglocken angehen. Am besten meldet ihr den Vorfall dann der richtigen IT. 
 &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P53.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
 
-Hast du bei der ersten Entscheidung den Tisch aufgeräumt? Passwörter, Kundendaten oder sensible Informationen sollten niemals offen am Arbeitsplatz liegen bleiben. Vielleicht ist dir auch der Mann im Hintergrund aufgefallen, der sich zuvor unbefugt Zugang zum Gebäude verschafft hat. 
+Hast du bei der ersten Entscheidung den Tisch aufgeräumt? Passwörter, Kundendaten oder sensible Informationen sollten niemals offen am Arbeitsplatz liegen bleiben. Außerdem solltest du jedes mal wenn du den Platz verlässt deinen Bildschrim sperren. Die Tastenkombination hierfür lautet: Windows-Taste ⊞ + L. 
+
+Vielleicht ist dir auch der Mann im Hintergrund aufgefallen, der sich zuvor unbefugt Zugang zum Gebäude verschafft hat (sogenanntes Tailgating). 
 &lt;div style=&quot;text-align: center;&quot;&gt;
-&lt;img src=&quot;Comic_Panels/P50.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
+&lt;img src=&quot;Comic_Panels/P51.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
 
 Falls du dich fragst, woher der Angreifer Informationen wie deine E-Mail-Adresse oder Hinweise auf den nächsten Baufinanzierungstermin hatte: Diese Informationen konnte der Angreifer entweder vom unaufgeräumten Arbeitsplatz oder aus der gefälschten Sicherheits-E-Mail vom Beginn einsehen.
 &lt;div style=&quot;text-align: center;&quot;&gt;
-&lt;img src=&quot;Comic_Panels/P52.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
+&lt;img src=&quot;Comic_Panels/P59.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
 
 Als letzter Punkt: Wenn du die verdächtige Sicherheits-E-Mail gemeldet hast, hast du möglicherweise bereits den Meldebutton gesehen.
 Falls du deine Daten eingegeben hast, wurde dieses Panel nicht angezeigt: 
 &lt;div style=&quot;text-align: center;&quot;&gt;
-&lt;img src=&quot;Comic_Panels/P51.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
+&lt;img src=&quot;Comic_Panels/P50.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
 
 Ein solcher Meldebutton wird zukünftig auch in eurem E-Mail-Programm verfügbar sein.
 
@@ -899,7 +1040,7 @@ border-radius:8px;
 line-height:1.6;
 font-size:0.95em;
 color:#1f2937;
-&quot;&gt; &lt;b&gt;Wichtige Erkenntnisse:&lt;/b&gt;&lt;br&gt;&lt;br&gt; ✓ Unbekannte Personen hinterfragen und auf Tailgating achten &lt;br&gt; ✓ Clean Desk Policy einhalten und sensible Informationen nicht offen liegen lassen&lt;br&gt; ✓Verdächtige Vorfälle frühzeitig melden (Incident Reporting)&lt;/div&gt;
+&quot;&gt; &lt;b&gt;Wichtige Erkenntnisse:&lt;/b&gt;&lt;br&gt; ✓ Unbekannte Personen hinterfragen und auf Tailgating achten &lt;br&gt; ✓ Clean Desk Policy einhalten und sensible Informationen nicht offen liegen lassen&lt;br&gt; ✓ Verdächtige Vorfälle frühzeitig melden (Incident Reporting)&lt;br&gt; ✓ Bildschrim beim Verlassen des Platzes sperren&lt;/div&gt;
 
 Du kannst das Training erneut beginnen, mit Tag 2 fortfahren oder das Training beenden.
 
@@ -907,28 +1048,29 @@ Du kannst das Training erneut beginnen, mit Tag 2 fortfahren oder das Training b
   &lt;div class=&quot;choice-overlay&quot;&gt;
   [[Erneut Spielen -&gt;Start]] [[Start Tag 2]] 
  &lt;/div&gt;
-&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="Wo waren die Fehler?" tags="" position="5425,275" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Analyse des Vorfalls&lt;/h3&gt; Du hast die Konsequenzen bereits gesehen: Neben einem wütendem Herr Weber, gab es auch betriebliche und persönliche Schäden.
 
-(BEENDEN BUTTON?)</tw-passagedata><tw-passagedata pid="51" name="Wo waren die Fehler?" tags="" position="5425,275" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Analyse des Vorfalls&lt;/h3&gt; Du hast die Konsquenzen bereits gesehen: Neben einem wütendem Herr Weber, gab es auch betriebliche und persönliche Schäden.
-
-Der entscheidende Fehler war die Weitergabe des telefonisch übermittelten Sicherheitscodes. Der Angreifer wusste schon vieles, aber ohne Zugriff auf Herrn Webers Mobiltelefon kam er nicht weiter. Der Sicherheitscode war das fehlende Puzzlestück, das ihm Überweisungen ermöglichte.
+Der entscheidende Fehler war die Weitergabe des telefonisch übermittelten Sicherheitscodes. Der Angreifer wusste schon vieles, aber ohne Zugriff auf Herr Webers Mobiltelefon kam er nicht weiter. Der Sicherheitscode war das fehlende Puzzlestück, dass ihm Überweisungen ermöglichte. &lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;img src=&quot;Comic_Panels/P22.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
 
 
 &lt;h4&gt;Doch wie kam er an die anderen Daten?&lt;/h4&gt;
-&lt;b&gt;Phishing&lt;/b&gt;&lt;br&gt; Zu Beginn des Tages hast du eine E-Mail erhalten, in der du aufgefordert wurdest, dein Kennwort zu aktualisieren. Hier wurdest du bewusst fehlgeleitet: Beide Optionen führten in die falsche Richtung – egal ob du die Daten selbst einträgst oder eine Kollegin fragst und das Kennwort dann aktualisierst. Die Kollegin zu fragen wirkte zunächst wie eine sichere Entscheidung. Allerdings wurde nicht hinterfragt, in welchem Kontext sie ihr Passwort aktualisiert hatte oder ob die E-Mail tatsächlich legitim war. &lt;br&gt;&lt;br&gt;
+&lt;b&gt;Phishing&lt;/b&gt;&lt;br&gt; Zu Beginn des Tages hast du eine E-Mail erhalten, in der du aufgefordert wurdest, dein Kennwort zu aktualisieren. Hier wurdest du bewusst fehlgeleitet: Beide Optionen führten in die falsche Richtung – egal ob du die Daten selbst einträgst oder eine Kollegin fragst und das Kennwort dann aktualisierst. Die Kollegin zu fragen wirkte zunächst wie eine sichere Entscheidung. Allerdings wurde nicht hinterfragt, in welchem Kontext sie ihr Passwort aktualisiert hatte oder ob die E-Mail tatsächlich legitim war. &lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;img src=&quot;Comic_Panels/P57.png&quot; width=&quot;40%&quot;&gt; &lt;/div&gt; &lt;br&gt;
 
-&lt;b&gt;Social Engineering&lt;/b&gt;&lt;br&gt; Durch die Eingabe der Daten erhielt der Angreifer Zugriff auf zahlreiche Informationen und konnte sich glaubwürdig als Herr Weber ausgeben. Wie du bemerkt hast, hatte der Angreifer Zugriff auf die Basisdaten und sogar das Sicherheitsmerkmal. Der einzige fehlende Faktor war der Sicherheitscode, der an die hinterlegte Telefonnummer gesendet wurde. Hier durftest du den Code auf keinen Fall weitergeben. Wie für Social-Engineering-Angriffe typisch, versuchte der Angreifer zusätzlich Druck aufzubauen:
+&lt;b&gt;Social Engineering&lt;/b&gt;&lt;br&gt; Durch die Eingabe der Daten (Phishing-Mail) erhielt der Angreifer Zugriff auf zahlreiche Informationen und konnte sich glaubwürdig als Herr Weber ausgeben. Wie du bemerkt hast, hatte der Angreifer Zugriff auf die Basisdaten und sogar das Sicherheitsmerkmal. Der einzige fehlende Faktor war der Sicherheitscode, der an die hinterlegte Telefonnummer gesendet wurde. Hier durftest du den Code auf keinen Fall weitergeben. Wie für Social-Engineering-Angriffe typisch, versuchte der Angreifer zusätzlich Druck aufzubauen:
 
 „Ich verliere Geld!“
 „Es geht um mein Erspartes!“
 
 Zeitdruck und emotionale Aussagen sollen dazu führen, dass Sicherheitsprozesse umgangen werden. &lt;br&gt;&lt;br&gt;
 
-&lt;b&gt;Vorfallsmeldung&lt;/b&gt;&lt;br&gt;Nachdem du den Code weitergegeben hast, hattest du noch die Möglichkeit den Account selbst zu sperren oder zu melden. Falls du den Account selbst gesperrt hast, hast du gesehen wie der Angreifer den nächsten Mitarbeiter angreift und noch mehr Geld überweist. Du hättest den Vorfall melden müssen um größeren Schaden zu verhindern und andere Mitarbeiter zu warnen. 
+&lt;b&gt;Vorfallsmeldung&lt;/b&gt;&lt;br&gt;Nachdem du den Code weitergegeben hast, hattest du noch die Möglichkeit den Account selbst zu sperren oder zu melden. Falls du den Account selbst gesperrt hast, hast du gesehen wie der Angreifer den nächsten Mitarbeiter angreift und noch mehr Geld überweist. Du hättest den Vorfall melden müssen um größeren Schaden zu verhindern und andere Mitarbeiter zu warnen. &lt;div style=&quot;text-align: center;&quot;&gt; &lt;img src=&quot;Comic_Panels/P54.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt; &lt;br &lt;br&gt;
 
-Zum Schluss nochmal die Kontaktmöglichkeiten zur IT-Abteilung: Durchwahl: 9598
-E-Mail: elsa@vrbank-a-oal.de
-oder das Ticket-System.
+
+&lt;b&gt;Zur Erinnerung die Kontaktmöglichkeiten zur IT-Abteilung sind:&lt;/b&gt;&lt;br&gt; Durchwahl: 9598
+Ticket-System
+oder per E-Mail: elsa@vrbank-a-oal.de
 
 &lt;div style=&quot;
 background-color:#e8eef5;
@@ -944,13 +1086,13 @@ color:#1f2937;
   &lt;div class=&quot;choice-overlay&quot;&gt;
   [[Bonus]] 
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="52" name="Debrief" tags="" position="5425,450" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Debriefing – Tag 2&lt;/h3&gt; Herzlichen Glückwunsch, du hast das Ende des Trainings erreicht und auch Tag 2 erfolgreich abgeschlossen! An diesem Tag standen insbesondere die Themen Phishing und Social Engineering im Fokus. (Genau genommen kam beides auch schon am ersten Tag vor)
+</tw-passagedata><tw-passagedata pid="52" name="Debrief" tags="" position="5425,450" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Debriefing – Tag 2&lt;/h3&gt; Herzlichen Glückwunsch, du hast das Ende des Trainings erreicht und auch Tag 2 (größtenteils) erfolgreich abgeschlossen! An diesem Tag standen insbesondere die Themen Phishing und Social Engineering im Fokus. (Genau genommen kam beides auch schon am ersten Tag vor)
 &lt;br&gt;&lt;br&gt;
 
 &lt;b&gt;Phishing&lt;/b&gt;&lt;br&gt; Zu Beginn des Tages hast du eine E-Mail erhalten, in der du aufgefordert wurdest, dein Kennwort zu aktualisieren. Hier wurdest du bewusst fehlgeleitet: Beide Optionen führten in die falsche Richtung – egal ob du die Daten selbst einträgst oder eine Kollegin fragst und das Kennwort dann aktualisierst. Die Kollegin zu fragen wirkte zunächst wie eine sichere Entscheidung. Allerdings wurde nicht hinterfragt, in welchem Kontext sie ihr Passwort aktualisiert hatte oder ob die E-Mail tatsächlich legitim war.
 &lt;br&gt;&lt;br&gt;
 
-&lt;b&gt;Social Engineering&lt;/b&gt;&lt;br&gt; Durch die Eingabe der Daten erhielt der Angreifer Zugriff auf zahlreiche Informationen und konnte sich glaubwürdig als Herr Weber ausgeben. Wie du bemerkt hast, hatte der Angreifer Zugriff auf die Basisdaten und sogar das Sicherheitsmerkmal. Der einzige fehlende Faktor war der Sicherheitscode, der an die hinterlegte Telefonnummer gesendet wurde. Hier durftest du den Code auf keinen Fall weitergeben. Wie für Social-Engineering-Angriffe typisch, versuchte der Angreifer zusätzlich Druck aufzubauen:
+&lt;b&gt;Social Engineering&lt;/b&gt;&lt;br&gt; Durch die Eingabe der Daten (Phishing-Mail) erhielt der Angreifer Zugriff auf zahlreiche Informationen und konnte sich glaubwürdig als Herr Weber ausgeben. Wie du bemerkt hast, hatte der Angreifer Zugriff auf die Basisdaten und sogar das Sicherheitsmerkmal. Der einzige fehlende Faktor war der Sicherheitscode, der an die hinterlegte Telefonnummer gesendet wurde. Hier durftest du den Code auf keinen Fall weitergeben. Wie für Social-Engineering-Angriffe typisch, versuchte der Angreifer zusätzlich Druck aufzubauen:
 
 „Ich verliere Geld!“  
 „Es geht um mein Erspartes!“
@@ -967,9 +1109,10 @@ Falls du den telefonisch übermittelten Sicherheitscode weitergegeben hast, hatt
 Auch in solchen Situationen gilt:
 Den Vorfall sofort an die IT melden, damit schnell reagiert und weiterer Schaden verhindert und andere Mitarbeiter gewarnt werden können.
 &lt;br&gt;&lt;br&gt;
-&lt;b&gt;Am Ende nochmal die Kontaktmöglichkeiten zur IT-Abteilung:&lt;/b&gt;&lt;br&gt; Durchwahl: 9598
-E-Mail: elsa@vrbank-a-oal.de
-oder das Ticket-System.
+&lt;b&gt;Zur Erinnerung die Kontaktmöglichkeiten zur IT-Abteilung sind:&lt;/b&gt;&lt;br&gt; Durchwahl: 9598
+Ticket-System
+oder per E-Mail: elsa@vrbank-a-oal.de
+
 
 &lt;div style=&quot;
 background-color:#e8eef5;
@@ -987,14 +1130,13 @@ color:#1f2937;
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="53" name="Bonus" tags="" position="5675,375" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Bonus: Eine Phishing-Mail erkennen&lt;/h3&gt; Schauen wir uns die E-Mail vom Beginn noch einmal genauer an.
+</tw-passagedata><tw-passagedata pid="53" name="Bonus" tags="" position="5700,400" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Bonus: Eine Phishing-Mail erkennen&lt;/h3&gt; Schauen wir uns die E-Mail von Tag 1 noch einmal genauer an.
 &lt;div style=&quot;text-align: center;&quot;&gt;
-&lt;img src=&quot;Comic_Panels/P52.png&quot; width=&quot;50%&quot;&gt;
-&lt;/div&gt;
-Woran hätte man erkennen können, dass die Nachricht nicht legitim war?
+&lt;img src=&quot;Comic_Panels/P59.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
+Woran hätte man erkennen können, dass die Nachricht ein Phishing-Versuch war?
 
 
-&lt;b&gt;Zeitdruck&lt;/b&gt;&lt;br&gt; Die E-Mail erzeugte künstlichen Druck: „Ihr Konto wird gesperrt.“
+&lt;b&gt;Zeitdruck&lt;/b&gt;&lt;br&gt; Die E-Mail erzeugte künstlichen Druck: „Ihr Konto wird sonst in den nächsten 24h gesperrt.“
 Zeitdruck ist ein typisches Merkmal von Phishing-Angriffen und soll schnelle Entscheidungen erzwingen.
 
 
@@ -1003,48 +1145,316 @@ Zeitdruck ist ein typisches Merkmal von Phishing-Angriffen und soll schnelle Ent
 
 &lt;h4&gt;Der wichtigste Hinweis: Der Absender&lt;/h4&gt; Der Absender wirkte zunächst legitim. Allerdings handelt es sich nicht um die echte Domain der Bank.
 Schauen wir uns die Adresse genauer an:
+
 &lt;div style=&quot;
-background-color:#eef3f8;
-padding:15px;
-border-radius:8px;
-border-left:5px solid #2b5c88;
+background-color:#ffffff;
+padding:12px;
+border-radius:6px;
 font-family:monospace;
 font-size:1.05em;
-color:#1f2937;
-margin-top:10px;
-margin-bottom:10px;
-&quot;&gt;
-it-support@&lt;b&gt;vrbank-security&lt;/b&gt;.&lt;b&gt;com&lt;/b&gt;
+border:1px solid #c7d4e2;
+&quot;&gt; &lt;span style=&quot;color:#2e7d32;&quot;&gt;&lt;b&gt;it-support&amp;#64;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;color:#1d4ed8;&quot;&gt;&lt;b&gt;vrbank-security&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;color:#b91c1c;&quot;&gt;&lt;b&gt;.com&lt;/b&gt;&lt;/span&gt;
 &lt;/div&gt;
 
+
+
 &lt;b&gt;Wie ist die Adresse aufgebaut?&lt;/b&gt;&lt;br&gt;
-&lt;b&gt;.com&lt;/b&gt;
-Die Endung einer Domain nennt man Top-Level-Domain.
-Die verwendete „.com“-Domain ist auffällig, da deutsche Banken üblicherweise „.de“-Domains verwenden.
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;img src=&quot;Comic_Panels/P55.png&quot; width=&quot;70%&quot;&gt; &lt;/div&gt;
+
+&lt;div style=&quot;
+display:flex;
+gap:20px;
+margin-top:15px;
+margin-bottom:15px;
+&quot;&gt;
+
+&lt;div style=&quot;
+flex:1;
+background-color:#eef8f0;
+border-left:5px solid #2e7d32;
+padding:15px;
+border-radius:8px;
+color:#1f2937;
+&quot;&gt; &lt;b&gt; ✅ Echte Domain&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+&lt;div style=&quot;
+font-family:monospace;
+font-size:1.05em;
+color:#2e7d32;
+font-weight:bold;&quot;&gt;@vrbank-a-oal.de &lt;/div&gt;
+
+Endet auf &lt;b&gt;.de&lt;/b&gt; und enthält den vollständigen Namen der Bank.
+
+&lt;/div&gt;
+
+&lt;div style=&quot;
+flex:1;
+background-color:#fff1f1;
+border-left:5px solid #b91c1c;
+padding:15px;
+border-radius:8px;
+color:#1f2937;
+&quot;&gt; &lt;b&gt;⚠️ Verdächtige Domain&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+&lt;div style=&quot;
+font-family:monospace;
+font-size:1.05em;
+color:#b91c1c;
+font-weight:bold;
+&quot;&gt;@vrbank-security.com &lt;/div&gt;
+
+„vrbank“ wirkt legitim, der Zusatz &lt;b&gt;„security“&lt;/b&gt; ist jedoch auffällig.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;
+background-color:#eef3f8;
+border-left:5px solid #2b5c88;
+padding:12px;
+border-radius:8px;
+color:#1f2937;
+margin-top:15px;
+font-size:0.95em;
+line-height:1.4;
+&quot;&gt; &lt;b&gt;💡 Tipp&lt;/b&gt;&lt;br&gt;
+Bei Mailadressen ist häufig besonders der Teil direkt vor &lt;b&gt;.de&lt;/b&gt; oder &lt;b&gt;.com&lt;/b&gt; (bis zum nächsten Punkt) entscheidend. 
+
+&lt;span style=&quot;font-family:monospace;&quot;&gt;
+mail.support.&lt;span style=&quot;color:#1d4ed8;&quot;&gt;&lt;b&gt;vrbank&lt;/b&gt;&lt;/span&gt;.de
+&lt;/span&gt;
+
+&lt;span style=&quot;color:#1d4ed8;&quot;&gt;&lt;b&gt;vrbank&lt;/b&gt;&lt;/span&gt; ist hier die eigentliche Second-Level-Domain.&lt;br&gt;
+Alles davor sind zusätzliche Subdomains und kann frei gewählt werden.
+
+&lt;/div&gt;
 
 
-&lt;b&gt;vrbank-security&lt;/b&gt;
-Dies ist die sogenannte Second-Level-Domain – also der eigentliche Domainname.
-Genau dieser Teil wird häufig von Angreifern manipuliert oder bewusst ähnlich gestaltet.
+  &lt;div class=&quot;choice-overlay&quot;&gt;
+[[Letzte Seite]] 
+  &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="Letzte Seite" tags="" position="5900,400" size="100,100">&lt;div class=&quot;scene-text&quot;&gt;&lt;h3&gt;Internetadressen richtig lesen&lt;/h3&gt;
 
-Angreifer ergänzen häufig zusätzliche Begriffe wie:
-- security
-- support
-- login
-- verify
-um vertrauenswürdig zu wirken.
+Mit diesem Wissen kannst du auch Internetadressen analysieren. Bei Internetadressen ist die eigentliche Domain der wichtigste Teil. Angreifer nutzen häufig lange oder ähnlich aussehende Adressen, damit die echte Domain schwerer erkennbar ist.
 
+&lt;div style=&quot;
+background-color:#eef3f8;
+border-left:5px solid #2b5c88;
+padding:12px;
+border-radius:8px;
+color:#1f2937;
+margin-top:15px;
+font-size:0.95em;
+line-height:1.4;
+&quot;&gt;&lt;b&gt;Beispiel:&lt;/b&gt;&lt;br&gt;
 
-&lt;b&gt;it-support&lt;/b&gt; 
-Dieser Teil ist lediglich der frei wählbare Mailname des Absenders.
+&lt;span style=&quot;
+font-family:monospace;
+font-weight:bold;
+font-size:1.05em;
+&quot;&gt; https://vrbank-augsburg-ostallgaeu.de.login.xyz/protectedcode/index.aspx
+&lt;/span&gt;
 
+Gehe von links nach rechts:
 
-&lt;b&gt;Vergleich:&lt;/b&gt;
-Die echte Domain in Augsburg lautet: vrbank-a-oal.de
+&lt;ul style=&quot;margin-top:5px; margin-bottom:5px; line-height:1.2;&quot;&gt;
+&lt;li&gt;Suche nach &lt;b&gt;https://&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;Betrachte den Bereich bis zum ersten &lt;b&gt;/&lt;/b&gt; danach&lt;/li&gt;
+&lt;li&gt;Die eigentliche Domain steht direkt vor der Endung wie &lt;b&gt;.de&lt;/b&gt;, &lt;b&gt;.com&lt;/b&gt; oder &lt;b&gt;.net&lt;/b&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-Gefälschte Domain: vrbank-security.com
+In diesem Beispiel wäre &lt;b&gt;login.xyz&lt;/b&gt; die eigentliche Zieladresse – nicht &lt;b&gt;vrbank-augsburg-ostallgaeu.de&lt;/b&gt;. 
+→ Alles vor dem Punkt direkt vor &lt;b&gt;login.xyz&lt;/b&gt; gehört nicht zur eigentlichen Domain und kann von Angreifern frei ergänzt werden.
+
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;img src=&quot;Comic_Panels/P56.png&quot; width=&quot;70%&quot;&gt; &lt;/div&gt;
+&lt;div style=&quot;
+display:flex;
+gap:20px;
+margin-top:15px;
+margin-bottom:15px;
+&quot;&gt; 
+
+&lt;div style=&quot;
+flex:1;
+background-color:#fff1f1;
+border-left:5px solid #b91c1c;
+padding:15px;
+border-radius:8px;
+color:#1f2937;
+&quot;&gt;⚠️ Verdächtige Internetadresse&lt;/b&gt;&lt;br&gt;
+&lt;div style=&quot;
+font-family:monospace;
+font-size:1.02em;
+font-weight:bold;
+color:#b91c1c;
+word-break:break-word;
+&quot;&gt; https://www.vrbank-security.de/login
+&lt;/div&gt;
 
 Die Adresse enthält zwar „vrbank“, gehört dadurch aber nicht automatisch zur echten Bank.
+&lt;/div&gt;
+
+&lt;div style=&quot;
+flex:1;
+background-color:#eef8f0;
+border-left:5px solid #2e7d32;
+padding:15px;
+border-radius:8px;
+color:#1f2937; &quot;&gt; ✅ Echte Internetadresse&lt;/b&gt;&lt;br&gt;
+&lt;div style=&quot;
+font-family:monospace;
+font-size:1.02em;
+font-weight:bold;
+color:#2e7d32;
+word-break:break-word;
+&quot;&gt; https://www.vrbank-augsburg-ostallgaeu.de
+
+&lt;/div&gt;
+Die echte Domain enthält den vollständigen Namen der Bank und endet auf &lt;b&gt;.de&lt;/b&gt;.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;choice-overlay&quot;&gt;
+[[Zum Quiz]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="Zum Quiz" tags="" position="6150,625" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Zum Abschluss: Ein kleines Quiz&lt;/h3&gt; &lt;h4&gt;Kannst du die verdächtigen Adressen erkennen?&lt;/h4&gt;
+&lt;br&gt;
+&lt;b&gt;1. elsa@vrbank-a-oal-security.de &lt;/b&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;2. elsa@vrbank-a-oal.de&lt;/b&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;3. support@vrbank.de.security-check.com&lt;/b&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;4. https://www.vrbank-security.com/login&lt;/b&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;5. https://vrbank-augsburg-ostallgaeu.de.login.xyz&lt;/b&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+
+
+&lt;div class=&quot;choice-overlay&quot;&gt;
+[[Auflösung zeigen]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="Auflösung zeigen" tags="" position="6250,375" size="100,100">&lt;div class=&quot;scene-text&quot;&gt;&lt;h3&gt;Auflösung&lt;/h3&gt;
+
+
+&lt;b&gt;1. elza@vrbank-a-oal-security.de&lt;/b&gt;
+&lt;div style=&quot;
+background-color:#fff1f1;
+border-left:5px solid #b91c1c;
+padding:12px;
+border-radius:8px;
+margin-top:8px;
+margin-bottom:20px;
+color:#1f2937;
+line-height:1.4;
+&quot;&gt;⚠️ Verdächtig&lt;br&gt;&lt;br&gt;
+Die richtige Domain lautet: &lt;b&gt;vrbank-a-oal.de&lt;/b&gt;
+Der Zusatz &lt;b&gt;security&lt;/b&gt; soll vertrauenswürdig wirken, gehört aber nicht zur echten Domain der Bank.
+Auch das &lt;b&gt;elza&lt;/b&gt; am Anfang ist falsch: richtig wäre &lt;b&gt;elsa&lt;/b&gt;.
+&lt;/div&gt;
+
+
+
+&lt;b&gt;2. elsa@vrbank-a-oal.de&lt;/b&gt;
+&lt;div style=&quot;
+background-color:#eef8f0;
+border-left:5px solid #2e7d32;
+padding:12px;
+border-radius:8px;
+margin-top:8px;
+margin-bottom:20px;
+color:#1f2937;
+line-height:1.4;
+&quot;&gt;✅ Legitim&lt;br&gt;&lt;br&gt;
+Die Adresse nutzt die echte Domain: &lt;b&gt;vrbank-a-oal.de&lt;/b&gt;
+Dies ist die echte Mail der IT für die Filliale.
+&lt;/div&gt;
+
+
+
+&lt;b&gt;3. support@vrbank.de.security-check.com&lt;/b&gt;
+&lt;div style=&quot;
+background-color:#fff1f1;
+border-left:5px solid #b91c1c;
+padding:12px;
+border-radius:8px;
+margin-top:8px;
+margin-bottom:20px;
+color:#1f2937;
+line-height:1.4;
+&quot;&gt;⚠️ Verdächtig&lt;br&gt;&lt;br&gt;
+Die Zieladresse lautet: &lt;b&gt;security-check.com&lt;/b&gt;
+Alles davor kann täuschend wirken. 
+Auch das &lt;b&gt;.com&lt;/b&gt; ist ein Hinweis auf eine verdächtige Mail.
+&lt;/div&gt;
+
+
+
+&lt;b&gt;4. https://www.vrbank-security.com/login&lt;/b&gt;
+&lt;div style=&quot;
+background-color:#fff1f1;
+border-left:5px solid #b91c1c;
+padding:12px;
+border-radius:8px;
+margin-top:8px;
+margin-bottom:20px;
+color:#1f2937;
+line-height:1.4;
+&quot;&gt;⚠️ Verdächtig&lt;br&gt;&lt;br&gt;
+Die Adresse enthält zwar „vrbank“, gehört jedoch nicht automatisch zur echten Bank.
+Der Zusatz &lt;b&gt;security&lt;/b&gt; ist auffällig. Und auch hier lautet die Top-Level-Domain &lt;b&gt;.com&lt;/b&gt; und ist ein weiterer Hinweis auf eine verdächtige Adresse.
+&lt;/div&gt;
+
+
+
+&lt;b&gt;5. https://vrbank-augsburg-ostallgaeu.de.login.xyz&lt;/b&gt;
+&lt;div style=&quot;
+background-color:#fff1f1;
+border-left:5px solid #b91c1c;
+padding:12px;
+border-radius:8px;
+margin-top:8px;
+margin-bottom:20px;
+color:#1f2937;
+line-height:1.4;
+&quot;&gt;⚠️ Verdächtig&lt;br&gt;&lt;br&gt;
+Die Zieladresse lautet: &lt;b&gt;login.xyz&lt;/b&gt;
+Der Teil davor: &lt;b&gt;vrbank-augsburg-ostallgaeu.de&lt;/b&gt; soll nur legitim wirken.
+Die Top-Level-Domain ist: &lt;b&gt;.xyz&lt;/b&gt;
+Die Second-Level Domain: &lt;b&gt;.login&lt;/b&gt;
+Beides verdächtig.
+&lt;/div&gt;
+&lt;div class=&quot;choice-overlay&quot;&gt;
+[[ENDE]]
+&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="ENDE" tags="" position="6400,375" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Vielen Dank für deine Teilnahme!&lt;/h3&gt;
+
+Du hast das Informationssicherheitstraining erfolgreich abgeschlossen.
+Wir hoffen, dass dir das interaktive Training dabei geholfen hat, verdächtige Situationen besser zu erkennen und Sicherheitsrisiken im Arbeitsalltag schneller einzuordnen.
+
+Informationssicherheit beginnt nicht erst bei technischen Systemen – sondern bei aufmerksamen Mitarbeitenden.
+
+Bitte nimm dir noch einen kurzen Moment Zeit und fülle die anschließende Evaluation aus.
+
+Vielen Dank für deine Unterstützung!
+
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;img src=&quot;Comic_Panels/P60.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
+
+&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="58" name="Header" tags="header" position="250,300" size="100,100">&lt;div class=&quot;debug-nav&quot;&gt;
+
+(link:&quot;← Zurück&quot;)[(undo:)]
+
 &lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
