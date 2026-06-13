@@ -92,8 +92,8 @@ tw-story {
 }
 
 .scene-text {
-  max-width: 1200px;
-  width: 100%;
+  width: 1100px;
+  max-width: calc(100vw - 20px);
     
   margin-left: auto;
   margin-right: auto;
@@ -109,6 +109,8 @@ tw-story {
 
   font-size: 18px;
   line-height: 1.6;
+
+  box-sizing: border-box;
 }
 
 .choice-overlay {
@@ -281,7 +283,50 @@ tw-story {
     #8fa8c4 100%
   );
 }
-  </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Start" tags="" position="250,575" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+.quiz-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.quiz-buttons tw-link {
+  display: inline-block !important;
+  min-width: 180px;
+  text-align: center;
+  padding: 14px 22px;
+  border-radius: 14px;
+  background: #26384d !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  text-decoration: none !important;
+  border: 2px solid #8fa8c4;
+  box-shadow: 0 4px 0 #111820;
+}
+
+.quiz-buttons tw-link:hover {
+  background: #34516f !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #111820;
+}
+
+.quiz-buttons tw-link:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #111820;
+}
+
+.quiz-feedback {
+  background: #223044;
+  border-left: 5px solid #8fa8c4;
+  padding: 16px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 22px;
+}
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Start" tags="" position="250,575" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;scene-text&quot;&gt; Der Tag beginnt. Es ist kurz vor Arbeitsbeginn und Max hat noch einige Meter vor sich.
 &lt;/div&gt;
 
@@ -426,31 +471,28 @@ tw-story {
   &lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="10" name="Code weitergeben" tags="" position="1775,625" size="100,100">&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="10" name="Zugriff erlauben" tags="" position="1775,750" size="100,100">&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max gibt den Code weiter und begibt sich zu seinem zweiten Meeting.
-&lt;/div&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max folgt den Anweisungen des IT-Mitarbeiters und gibt den Zugriff auf seinen PC frei.&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
  &lt;img src=&quot;Comic_Panels/P9_1.png&quot;&gt;
-&lt;div class=&quot;scene-text&quot;&gt; Max ist mitten im gut laufendem Meeting. Es wäre unprofessionell dieses jetzt zu beenden.
-&lt;/div&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
-[[Meeting forsetzen]]
-[[Meeting unterbrechen]]
-&lt;/div&gt;
+[[Weiter zum Termin]]
+  &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="11" name="Weiter mit dem Telefonat" tags="" position="1425,675" size="100,100">&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="11" name="Weiter mit dem Telefonat" tags="" position="1450,600" size="100,100">&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Das Telefonat geht weiter:
 &lt;/div&gt;
+
 &lt;div class=&quot;comic-panel&quot;&gt;
-  &lt;img src=&quot;Comic_Panels/P8_2.png&quot;&gt;  
+  &lt;img src=&quot;Comic_Panels/P8_2.png&quot;&gt;   
   &lt;div class=&quot;choice-overlay&quot;&gt;
 
-[[Code weitergeben]] 
+[[Zugriff erlauben]] 
 [[Nachhaken]] 
   &lt;/div&gt;
 &lt;/div&gt;
@@ -467,8 +509,8 @@ tw-story {
 &lt;/div&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
-[[Code weitergeben]] 
-[[Code nicht weitergeben -&gt;Misstrauisch bleiben]]
+[[Zugriff erlauben]] 
+[[Zugriff verwehren -&gt;Misstrauisch bleiben]]
 &lt;/div&gt;
 
 
@@ -489,13 +531,13 @@ tw-story {
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="14" name="Meeting forsetzen" tags="" position="2000,750" size="100,100">&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="14" name="Meeting forsetzen" tags="" position="2050,750" size="100,100">&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max setzt das Meeting fort. Währenddessen bahnt sich eine Katastrophe an.
 &lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
-  &lt;img src=&quot;Comic_Panels/P9_2.png&quot;&gt;
+  &lt;img src=&quot;Comic_Panels/P9_3.png&quot;&gt;
 &lt;div class=&quot;scene-text&quot;&gt; Max wird sich langsam bewusst, dass er einen großen Fehler begangen hat.
 &lt;/div&gt;
 
@@ -515,11 +557,11 @@ tw-story {
 [[Tag beenden]]
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="16" name="Weiter" tags="" position="2200,750" size="100,100">&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="16" name="Weiter" tags="" position="2225,750" size="100,100">&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Die Folgen sind gravierend: Kunden, Mitarbeitende und die gesamte Bank sind nun von den Konsequenzen betroffen. &lt;/div&gt;
 &lt;div class=&quot;comic-panel&quot;&gt;
-  &lt;img src=&quot;Comic_Panels/P9_3.png&quot;&gt;
+  &lt;img src=&quot;Comic_Panels/P9_4.png&quot;&gt;
 &lt;/div&gt;
 
  &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -532,8 +574,8 @@ tw-story {
   &lt;img src=&quot;Comic_Panels/P12_2.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
-[[Code weitergeben]]
-[[Code nicht weitergeben-&gt;Misstrauisch bleiben]]
+[[Zugriff erlauben]]
+[[Zugriff verwehren-&gt;Misstrauisch bleiben]]
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -564,8 +606,8 @@ tw-story {
   &lt;img src=&quot;Comic_Panels/P8_3.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
-[[Code weitergeben]] 
-[[Code nicht weitergeben -&gt;Misstrauisch bleiben]] 
+[[Zugriff erlauben]] 
+[[Zugriff verwehren -&gt;Misstrauisch bleiben]] 
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -634,21 +676,23 @@ Er ist müde, da er noch keinen Kaffee hatte und sein Arbeitsplatz ist vom Vorta
 &lt;br&gt;&lt;br&gt;  &lt;b&gt;Tailgating&lt;/b&gt;&lt;br&gt;Zu Beginn wollte ein unbekannter Mann das Gebäude betreten. Max selbst hat ihn nicht hereingelassen. Dennoch gelangte der Mann durch sogenanntes Tailgating in das Gebäude – also durch unauffälliges Mitlaufen hinter einem Mitarbeitenden. &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P58.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
 
-&lt;br&gt;&lt;br&gt;  &lt;b&gt;Clean Desk Policy&lt;/b&gt;&lt;br&gt; Falls du bei der ersten Entscheidung den Tisch aufgeräumt hast, dann hast du richtig reagiert. Passwörter, Kundendaten oder sensible Informationen sollten niemals offen am Arbeitsplatz liegen bleiben. Außerdem solltest du jedes mal wenn du den Platz verlässt deinen Bildschrim sperren. Die Tastenkombination hierfür lautet: Windows-Taste ⊞ + L. 
+&lt;br&gt;&lt;br&gt;  &lt;b&gt;Clean Desk Policy&lt;/b&gt;&lt;br&gt; Falls Sie bei der ersten Entscheidung den Tisch aufgeräumt haben, haben Sie richtig reagiert. Passwörter, Kundendaten oder sensible Informationen sollten niemals offen am Arbeitsplatz liegen bleiben. Außerdem sollten Sie jedes Mal, wenn Sie Ihren Platz verlassen, Ihren Bildschirm sperren. Die Tastenkombination hierfür lautet: Windows-Taste ⊞ + L. 
 
-Ist dir der Mann im Hintergrund aufgefallen, der an deinem Arbeitsplatz vorbeigelaufen ist?
+Ist Ihnen der Mann im Hintergrund aufgefallen, der an Ihrem Arbeitsplatz vorbeigelaufen ist?
 &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P51.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
-Dabei handelt es sich um denselben Mann, der sich zuvor unbefugten Zugang zum Gebäude verschafft hat. Falls dein Arbeitsplatz aufgeräumt war, konnte er keine zusätzlichen Informationen sammeln. 
-Falls du jedoch „Kaffee holen“ oder „Mails öffnen“ gewählt hast, konnte der Angreifer sensible Informationen einsehen – beispielsweise deine E-Mail-Adresse (max.mueller@vrbank.de) oder sogar Hinweise auf deinen nächsten Baufinanzierungstermin. Solche Informationen können später genutzt werden, um glaubwürdiger aufzutreten und mehr Druck auszuüben.
+Dabei handelt es sich um denselben Mann, der sich zuvor unbefugten Zugang zum Gebäude verschafft hat. Falls Ihr Arbeitsplatz aufgeräumt war, konnte er keine zusätzlichen Informationen sammeln.
+Falls Sie jedoch „Kaffee holen“ oder „Mails öffnen“ gewählt haben, konnte der Angreifer sensible Informationen einsehen – beispielsweise Ihre E-Mail-Adresse (max.mueller@vrbank.de) oder sogar Hinweise auf Ihren nächsten Baufinanzierungstermin. Solche Informationen können später genutzt werden, um glaubwürdiger aufzutreten und mehr Druck auszuüben.
 
-&lt;br&gt;&lt;br&gt; &lt;b&gt;Vorfallsmeldung&lt;/b&gt;&lt;br&gt; Wenn du die verdächtige Sicherheits-E-Mail gemeldet hast, hast du möglicherweise bereits den Meldebutton gesehen. 
-Falls du deine Daten eingegeben hast, wurde dieses Panel nicht angezeigt:
+&lt;br&gt;&lt;br&gt; &lt;b&gt;Vorfallsmeldung&lt;/b&gt;&lt;br&gt; Wenn Sie die verdächtige Sicherheits-E-Mail gemeldet haben, haben Sie möglicherweise bereits den Meldebutton gesehen.
+Falls Sie Ihre Daten eingegeben haben, wurde dieses Panel nicht angezeigt:
 &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P50.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
-Ein solcher Meldebutton wird zukünftig auch in eurem E-Mail-Programm verfügbar sein.
+Ein solcher Meldebutton wird zukünftig auch in Ihrem E-Mail-Programm verfügbar sein.
 &lt;br&gt;&lt;br&gt;
-Als letzter Punkt: Eure IT wird euch nie anrufen und nach Authentifizierungsdaten fragen. Bei solchen Anrufen sollten sofort Alarmglocken angehen. Am besten meldet ihr den Vorfall dann der richtigen IT. Wenn du den Authentifizierungscode weitergegeben hattest, war es wichtig das Meeting zu unterbrechen, da es die letzte Chance war den Angriff zu unterbinden. Lieber zu spät melden als nie.
+Als letzter Punkt: Ihre IT wird Sie niemals unangekündigt anrufen und Sie auffordern, einen Link oder eine Datei zu öffnen, um Zugriff auf Ihren PC zu erhalten. Bei solchen Anrufen sollten sofort Alarmglocken angehen. Am besten beenden Sie das Gespräch und melden den Vorfall der richtigen IT.
+
+Wenn Sie den Link geöffnet und den Zugriff auf Ihren PC freigegeben hatten, war es wichtig, das laufende Meeting zu unterbrechen und den Vorfall sofort zu melden. Das war die letzte Chance, den Angriff noch zu stoppen oder den Schaden zu begrenzen. Lieber zu spät melden als nie.
 &lt;div style=&quot;
 background-color:#e8eef5;
 border-left:5px solid #2b5c88;
@@ -988,10 +1032,9 @@ color:#1f2937;
 Warum braucht es überhaupt Schulungen?
 Der europäische Finanz- und Bankensektor gehört zu den am stärksten angegriffenen Branchen im Bereich der Cybersicherheit. Fast 40 % aller Cyberangriffe in Europa richten sich gegen diesen Sektor.
 
-Dies ist keine klassische Schulung, sondern ein interaktives, spielartiges Training.
-In diesem interaktiven Spiel übernimmst du die Rolle von Max, einem Bankmitarbeitenden, der ganz normal in seinen Arbeitstag startet.
+In diesem interaktiven Training übernehmen Sie die Rolle von Max, einem Bankmitarbeitenden, der ganz normal in seinen Arbeitstag startet.
 
-Die Geschichte spielt in einer Bankfiliale und du wirst im Verlauf immer wieder vor Entscheidungen gestellt. Deine Antworten beeinflussen den weiteren Verlauf der Handlung und führen zu unterschiedlichen Situationen.
+Die Geschichte spielt in einer Bankfiliale und Sie werden im Verlauf immer wieder vor Entscheidungen gestellt. Ihre Antworten beeinflussen den weiteren Verlauf der Handlung und führen zu unterschiedlichen Situationen.
 
 Die Handlung wird im Comic-Format erzählt. Comics liest man in der folgenden Reihenfolge:
 &lt;div style=&quot;text-align: center;&quot;&gt;
@@ -1006,30 +1049,29 @@ Hier drunter ist der Start-Button. Viel Spaß!
   &lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="50" name="Was ist passiert?" tags="" position="2350,750" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Analyse des Vorfalls&lt;/h3&gt; Wie du an den Konsequenzen bereits sehen konntest, konnte der Angriff nicht mehr rechtzeitig gestoppt werden. Dadurch entstanden sowohl betriebliche als auch persönliche Schäden.
+</tw-passagedata><tw-passagedata pid="50" name="Was ist passiert?" tags="" position="2375,650" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Analyse des Vorfalls&lt;/h3&gt; Wie Sie an den Konsequenzen bereits sehen konnten, konnte der Angriff nicht mehr rechtzeitig gestoppt werden. Dadurch entstanden sowohl betriebliche als auch persönliche Schäden.
 
 Die letzte Möglichkeit, den Angriff erfolgreich zu verhindern, bestand während des Meetings. In einer solchen Situation sollte das Meeting sofort unterbrochen und der Vorfall gemeldet werden. Lieber einmal zu viel melden als einmal zu wenig.
 
-Ein weiterer Fehler war die Weitergabe des Authentifizierungscodes. Eure IT wird euch nie anrufen und nach Authentifizierungsdaten fragen. Bei solchen Anrufen sollten sofort Alarmglocken angehen. Am besten meldet ihr den Vorfall dann der richtigen IT. 
+Ein weiterer Fehler war das Öffnen des zugesendeten Links und die Freigabe des Zugriffs auf den PC. Ihre IT wird Sie niemals unangekündigt anrufen und Sie auffordern, einen Link oder eine Datei zu öffnen, um Zugriff auf Ihr Gerät zu erhalten. Bei solchen Anrufen sollten sofort Alarmglocken angehen. Am besten melden Sie den Vorfall dann der richtigen IT.
 &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P53.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
 
-Hast du bei der ersten Entscheidung den Tisch aufgeräumt? Passwörter, Kundendaten oder sensible Informationen sollten niemals offen am Arbeitsplatz liegen bleiben. Außerdem solltest du jedes mal wenn du den Platz verlässt deinen Bildschrim sperren. Die Tastenkombination hierfür lautet: Windows-Taste ⊞ + L. 
+Haben Sie bei der ersten Entscheidung den Tisch aufgeräumt? Passwörter, Kundendaten oder sensible Informationen sollten niemals offen am Arbeitsplatz liegen bleiben. Außerdem sollten Sie jedes Mal, wenn Sie Ihren Platz verlassen, Ihren Bildschirm sperren. Die Tastenkombination hierfür lautet: Windows-Taste ⊞ + L.
 
-Vielleicht ist dir auch der Mann im Hintergrund aufgefallen, der sich zuvor unbefugt Zugang zum Gebäude verschafft hat (sogenanntes Tailgating). 
+Vielleicht ist Ihnen auch der Mann im Hintergrund aufgefallen, der sich zuvor unbefugt Zugang zum Gebäude verschafft hat (sogenanntes Tailgating).
 &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P51.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
 
-Falls du dich fragst, woher der Angreifer Informationen wie deine E-Mail-Adresse oder Hinweise auf den nächsten Baufinanzierungstermin hatte: Diese Informationen konnte der Angreifer entweder vom unaufgeräumten Arbeitsplatz oder aus der gefälschten Sicherheits-E-Mail vom Beginn einsehen.
+Falls Sie sich fragen, woher der Angreifer Informationen wie Ihre E-Mail-Adresse oder Hinweise auf den nächsten Baufinanzierungstermin hatte: Diese Informationen konnte der Angreifer entweder vom unaufgeräumten Arbeitsplatz oder aus der gefälschten Sicherheits-E-Mail vom Beginn einsehen.
 &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P59.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
 
-Als letzter Punkt: Wenn du die verdächtige Sicherheits-E-Mail gemeldet hast, hast du möglicherweise bereits den Meldebutton gesehen.
-Falls du deine Daten eingegeben hast, wurde dieses Panel nicht angezeigt: 
+Als letzter Punkt: Wenn Sie die verdächtige Sicherheits-E-Mail gemeldet haben, haben Sie möglicherweise bereits den Meldebutton gesehen. Falls Sie Ihre Daten eingegeben haben, wurde dieses Panel nicht angezeigt.
 &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P50.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
 
-Ein solcher Meldebutton wird zukünftig auch in eurem E-Mail-Programm verfügbar sein.
+Ein solcher Meldebutton wird zukünftig auch in Ihrem E-Mail-Programm verfügbar sein.
 
 &lt;div style=&quot;
 background-color:#e8eef5;
@@ -1042,23 +1084,24 @@ font-size:0.95em;
 color:#1f2937;
 &quot;&gt; &lt;b&gt;Wichtige Erkenntnisse:&lt;/b&gt;&lt;br&gt; ✓ Unbekannte Personen hinterfragen und auf Tailgating achten &lt;br&gt; ✓ Clean Desk Policy einhalten und sensible Informationen nicht offen liegen lassen&lt;br&gt; ✓ Verdächtige Vorfälle frühzeitig melden (Incident Reporting)&lt;br&gt; ✓ Bildschrim beim Verlassen des Platzes sperren&lt;/div&gt;
 
-Du kannst das Training erneut beginnen, mit Tag 2 fortfahren oder das Training beenden.
+Sie können das Training erneut beginnen oder mit Tag 2 fortfahren.
 
 &lt;/div&gt;
   &lt;div class=&quot;choice-overlay&quot;&gt;
   [[Erneut Spielen -&gt;Start]] [[Start Tag 2]] 
  &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="Wo waren die Fehler?" tags="" position="5425,275" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Analyse des Vorfalls&lt;/h3&gt; Du hast die Konsequenzen bereits gesehen: Neben einem wütendem Herr Weber, gab es auch betriebliche und persönliche Schäden.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="Wo waren die Fehler?" tags="" position="5425,275" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Analyse des Vorfalls&lt;/h3&gt; Sie haben die Konsequenzen bereits gesehen: Neben einem wütenden Herrn Weber gab es auch betriebliche und persönliche Schäden.
 
-Der entscheidende Fehler war die Weitergabe des telefonisch übermittelten Sicherheitscodes. Der Angreifer wusste schon vieles, aber ohne Zugriff auf Herr Webers Mobiltelefon kam er nicht weiter. Der Sicherheitscode war das fehlende Puzzlestück, dass ihm Überweisungen ermöglichte. &lt;div style=&quot;text-align: center;&quot;&gt;
+FALSCH Der entscheidende Fehler war die Weitergabe des telefonisch übermittelten Sicherheitscodes. Der Angreifer wusste schon vieles, aber ohne Zugriff auf Herr Webers Mobiltelefon kam er nicht weiter. Der Sicherheitscode war das fehlende Puzzlestück, dass ihm Überweisungen ermöglichte. &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P22.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
 
 
 &lt;h4&gt;Doch wie kam er an die anderen Daten?&lt;/h4&gt;
-&lt;b&gt;Phishing&lt;/b&gt;&lt;br&gt; Zu Beginn des Tages hast du eine E-Mail erhalten, in der du aufgefordert wurdest, dein Kennwort zu aktualisieren. Hier wurdest du bewusst fehlgeleitet: Beide Optionen führten in die falsche Richtung – egal ob du die Daten selbst einträgst oder eine Kollegin fragst und das Kennwort dann aktualisierst. Die Kollegin zu fragen wirkte zunächst wie eine sichere Entscheidung. Allerdings wurde nicht hinterfragt, in welchem Kontext sie ihr Passwort aktualisiert hatte oder ob die E-Mail tatsächlich legitim war. &lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;b&gt;Phishing&lt;/b&gt;&lt;br&gt; Zu Beginn des Tages haben Sie eine E-Mail erhalten, in der Sie aufgefordert wurden, Ihr Kennwort zu aktualisieren. Hier wurden Sie bewusst fehlgeleitet: Beide Optionen führten in die falsche Richtung – egal, ob Sie die Daten selbst eingetragen oder eine Kollegin gefragt und das Kennwort anschließend aktualisiert haben. Die Kollegin zu fragen wirkte zunächst wie eine sichere Entscheidung. Allerdings wurde nicht hinterfragt, in welchem Kontext sie ihr Passwort aktualisiert hatte oder ob die E-Mail tatsächlich legitim war. &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P57.png&quot; width=&quot;40%&quot;&gt; &lt;/div&gt; &lt;br&gt;
 
-&lt;b&gt;Social Engineering&lt;/b&gt;&lt;br&gt; Durch die Eingabe der Daten (Phishing-Mail) erhielt der Angreifer Zugriff auf zahlreiche Informationen und konnte sich glaubwürdig als Herr Weber ausgeben. Wie du bemerkt hast, hatte der Angreifer Zugriff auf die Basisdaten und sogar das Sicherheitsmerkmal. Der einzige fehlende Faktor war der Sicherheitscode, der an die hinterlegte Telefonnummer gesendet wurde. Hier durftest du den Code auf keinen Fall weitergeben. Wie für Social-Engineering-Angriffe typisch, versuchte der Angreifer zusätzlich Druck aufzubauen:
+&lt;b&gt;Social Engineering&lt;/b&gt;&lt;br&gt; Durch die Eingabe der Daten (Phishing-Mail) erhielt der Angreifer Zugriff auf zahlreiche Informationen und konnte sich glaubwürdig als Herr Weber ausgeben. 
+FALSCH Wie du bemerkt hast, hatte der Angreifer Zugriff auf die Basisdaten und sogar das Sicherheitsmerkmal. Der einzige fehlende Faktor war der Sicherheitscode, der an die hinterlegte Telefonnummer gesendet wurde. Hier durftest du den Code auf keinen Fall weitergeben. Wie für Social-Engineering-Angriffe typisch, versuchte der Angreifer zusätzlich Druck aufzubauen:
 
 „Ich verliere Geld!“
 „Es geht um mein Erspartes!“
@@ -1068,8 +1111,8 @@ Zeitdruck und emotionale Aussagen sollen dazu führen, dass Sicherheitsprozesse 
 &lt;b&gt;Vorfallsmeldung&lt;/b&gt;&lt;br&gt;Nachdem du den Code weitergegeben hast, hattest du noch die Möglichkeit den Account selbst zu sperren oder zu melden. Falls du den Account selbst gesperrt hast, hast du gesehen wie der Angreifer den nächsten Mitarbeiter angreift und noch mehr Geld überweist. Du hättest den Vorfall melden müssen um größeren Schaden zu verhindern und andere Mitarbeiter zu warnen. &lt;div style=&quot;text-align: center;&quot;&gt; &lt;img src=&quot;Comic_Panels/P54.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt; &lt;br &lt;br&gt;
 
 
-&lt;b&gt;Zur Erinnerung die Kontaktmöglichkeiten zur IT-Abteilung sind:&lt;/b&gt;&lt;br&gt; Durchwahl: 9598
-Ticket-System
+&lt;b&gt;Zur Erinnerung die Kontaktmöglichkeiten zur IT-Abteilung sind:&lt;/b&gt;&lt;br&gt; telefonische Durchwahl: 9598 (vor allem bei Notfällen wenn z.B. schon Daten weitergegeben wurden)
+Ticket-System bzw. das elsa-Formular
 oder per E-Mail: elsa@vrbank-a-oal.de
 
 &lt;div style=&quot;
@@ -1086,12 +1129,13 @@ color:#1f2937;
   &lt;div class=&quot;choice-overlay&quot;&gt;
   [[Bonus]] 
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="52" name="Debrief" tags="" position="5425,450" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Debriefing – Tag 2&lt;/h3&gt; Herzlichen Glückwunsch, du hast das Ende des Trainings erreicht und auch Tag 2 (größtenteils) erfolgreich abgeschlossen! An diesem Tag standen insbesondere die Themen Phishing und Social Engineering im Fokus. (Genau genommen kam beides auch schon am ersten Tag vor)
+</tw-passagedata><tw-passagedata pid="52" name="Debrief" tags="" position="5425,450" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Debriefing – Tag 2&lt;/h3&gt; Herzlichen Glückwunsch, Sie haben das Ende des Trainings erreicht und auch Tag 2 (größtenteils) erfolgreich abgeschlossen! An diesem Tag standen insbesondere die Themen Phishing und Social Engineering im Fokus. (Genau genommen kam beides auch schon am ersten Tag vor)
 &lt;br&gt;&lt;br&gt;
 
-&lt;b&gt;Phishing&lt;/b&gt;&lt;br&gt; Zu Beginn des Tages hast du eine E-Mail erhalten, in der du aufgefordert wurdest, dein Kennwort zu aktualisieren. Hier wurdest du bewusst fehlgeleitet: Beide Optionen führten in die falsche Richtung – egal ob du die Daten selbst einträgst oder eine Kollegin fragst und das Kennwort dann aktualisierst. Die Kollegin zu fragen wirkte zunächst wie eine sichere Entscheidung. Allerdings wurde nicht hinterfragt, in welchem Kontext sie ihr Passwort aktualisiert hatte oder ob die E-Mail tatsächlich legitim war.
+&lt;b&gt;Phishing&lt;/b&gt;&lt;br&gt; Zu Beginn des Tages haben Sie eine E-Mail erhalten, in der Sie aufgefordert wurden, Ihr Kennwort zu aktualisieren. Hier wurden Sie bewusst fehlgeleitet: Beide Optionen führten in die falsche Richtung – egal, ob Sie die Daten selbst eingetragen oder eine Kollegin gefragt und das Kennwort anschließend aktualisiert haben. Die Kollegin zu fragen wirkte zunächst wie eine sichere Entscheidung. Allerdings wurde nicht hinterfragt, in welchem Kontext sie ihr Passwort aktualisiert hatte oder ob die E-Mail tatsächlich legitim war.
 &lt;br&gt;&lt;br&gt;
 
+FALSCH AB HIER
 &lt;b&gt;Social Engineering&lt;/b&gt;&lt;br&gt; Durch die Eingabe der Daten (Phishing-Mail) erhielt der Angreifer Zugriff auf zahlreiche Informationen und konnte sich glaubwürdig als Herr Weber ausgeben. Wie du bemerkt hast, hatte der Angreifer Zugriff auf die Basisdaten und sogar das Sicherheitsmerkmal. Der einzige fehlende Faktor war der Sicherheitscode, der an die hinterlegte Telefonnummer gesendet wurde. Hier durftest du den Code auf keinen Fall weitergeben. Wie für Social-Engineering-Angriffe typisch, versuchte der Angreifer zusätzlich Druck aufzubauen:
 
 „Ich verliere Geld!“  
@@ -1100,7 +1144,7 @@ color:#1f2937;
 Zeitdruck und emotionale Aussagen sollen dazu führen, dass Sicherheitsprozesse umgangen werden.
 &lt;br&gt;&lt;br&gt;
 
-&lt;b&gt;Vorfallsmeldung&lt;/b&gt;&lt;br&gt; Wichtig war auch, dass du den Vorfall meldest und nicht normal weiter arbeitest. Falls du den Vorfall nicht gemeldet hast, konntest du sehen, wie der Angreifer den nächsten Mitarbeitenden kontaktiert und schließlich erfolgreich Zugriff auf das Konto erhält: &lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;b&gt;Vorfallsmeldung&lt;/b&gt;&lt;br&gt; Wichtig war außerdem, dass Sie den Vorfall melden und nicht einfach normal weiterarbeiten. Falls Sie den Vorfall nicht gemeldet haben, konnten Sie sehen, wie der Angreifer den nächsten Mitarbeitenden kontaktiert und schließlich erfolgreich Zugriff auf das Konto erhält. &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P28_1.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
 
 Falls du den telefonisch übermittelten Sicherheitscode weitergegeben hast, hattest du anschließend noch die Möglichkeit, den Account selbst zu sperren oder den Vorfall der IT-Abteilung zu melden &lt;div style=&quot;text-align: center;&quot;&gt;
@@ -1109,8 +1153,8 @@ Falls du den telefonisch übermittelten Sicherheitscode weitergegeben hast, hatt
 Auch in solchen Situationen gilt:
 Den Vorfall sofort an die IT melden, damit schnell reagiert und weiterer Schaden verhindert und andere Mitarbeiter gewarnt werden können.
 &lt;br&gt;&lt;br&gt;
-&lt;b&gt;Zur Erinnerung die Kontaktmöglichkeiten zur IT-Abteilung sind:&lt;/b&gt;&lt;br&gt; Durchwahl: 9598
-Ticket-System
+&lt;b&gt;Zur Erinnerung die Kontaktmöglichkeiten zur IT-Abteilung sind:&lt;/b&gt;&lt;br&gt; telefonische Durchwahl: 9598 (vor allem bei Notfällen wenn z.B. schon Daten weitergegeben wurden)
+Ticket-System bzw. das elsa-Formular
 oder per E-Mail: elsa@vrbank-a-oal.de
 
 
@@ -1215,14 +1259,14 @@ margin-top:15px;
 font-size:0.95em;
 line-height:1.4;
 &quot;&gt; &lt;b&gt;💡 Tipp&lt;/b&gt;&lt;br&gt;
-Bei Mailadressen ist häufig besonders der Teil direkt vor &lt;b&gt;.de&lt;/b&gt; oder &lt;b&gt;.com&lt;/b&gt; (bis zum nächsten Punkt) entscheidend. 
+Bei Mailadressen ist besonders der Teil direkt vor &lt;b&gt;.de&lt;/b&gt; oder &lt;b&gt;.com&lt;/b&gt; (bis zum vorherigen Punkt) entscheidend. 
 
 &lt;span style=&quot;font-family:monospace;&quot;&gt;
-mail.support.&lt;span style=&quot;color:#1d4ed8;&quot;&gt;&lt;b&gt;vrbank&lt;/b&gt;&lt;/span&gt;.de
+@mail.support.&lt;span style=&quot;color:#1d4ed8;&quot;&gt;&lt;b&gt;vrbank&lt;/b&gt;&lt;/span&gt;.de
 &lt;/span&gt;
 
-&lt;span style=&quot;color:#1d4ed8;&quot;&gt;&lt;b&gt;vrbank&lt;/b&gt;&lt;/span&gt; ist hier die eigentliche Second-Level-Domain.&lt;br&gt;
-Alles davor sind zusätzliche Subdomains und kann frei gewählt werden.
+&lt;span style=&quot;color:#1d4ed8;&quot;&gt;&lt;b&gt;vrbank&lt;/b&gt;&lt;/span&gt; ist hier der entscheidende Teil der Mailadresse.&lt;br&gt;
+Alles, was vor dem Punkt vor &lt;span style=&quot;color:#1d4ed8;&quot;&gt;&lt;b&gt; vrbank &lt;/b&gt;&lt;/span&gt;steht – also zum Beispiel mail oder support – kann zusätzlich ergänzt werden und wirkt oft offiziell, ist aber nicht der wichtigste Teil.
 
 &lt;/div&gt;
 
@@ -1244,23 +1288,16 @@ margin-top:15px;
 font-size:0.95em;
 line-height:1.4;
 &quot;&gt;&lt;b&gt;Beispiel:&lt;/b&gt;&lt;br&gt;
+&lt;img src=&quot;Comic_Panels/P61.png&quot; width=&quot;50%&quot;&gt;
 
-&lt;span style=&quot;
-font-family:monospace;
-font-weight:bold;
-font-size:1.05em;
-&quot;&gt; https://vrbank-augsburg-ostallgaeu.de.login.xyz/protectedcode/index.aspx
-&lt;/span&gt;
-
-Gehe von links nach rechts:
+Gehe Sie von links nach rechts vor:
 
 &lt;ul style=&quot;margin-top:5px; margin-bottom:5px; line-height:1.2;&quot;&gt;
-&lt;li&gt;Suche nach &lt;b&gt;https://&lt;/b&gt;&lt;/li&gt;
-&lt;li&gt;Betrachte den Bereich bis zum ersten &lt;b&gt;/&lt;/b&gt; danach&lt;/li&gt;
-&lt;li&gt;Die eigentliche Domain steht direkt vor der Endung wie &lt;b&gt;.de&lt;/b&gt;, &lt;b&gt;.com&lt;/b&gt; oder &lt;b&gt;.net&lt;/b&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-In diesem Beispiel wäre &lt;b&gt;login.xyz&lt;/b&gt; die eigentliche Zieladresse – nicht &lt;b&gt;vrbank-augsburg-ostallgaeu.de&lt;/b&gt;. 
+&lt;li&gt;Schritt 1: Suche Sie nach &lt;b&gt;https://&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;Schritt 2: Gehen Sie von dort nach rechts bis zum ersten Slash &lt;b&gt;(&quot;/&quot;)&lt;/b&gt;. Dort stoppen Sie.&lt;/li&gt;
+&lt;li&gt;Schritt 3: Gehen Sie vom Slash wieder nach links zurück bis zum ersten Punkt. Direkt rechts von diesem Punkt steht die Endung der Adresse, z.B.  &lt;b&gt;.de, .com&lt;/b&gt; oder wie in diesem Fall &lt;b&gt;.xyz&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;Schritt 4: Gehen Sie nun noch weiter nach links bis zum nächsten Punkt. Der Teil zwischen diesem Punkt und dem Slash aus Schritt 2 ist die Zieladresse.&lt;/li&gt; &lt;/ul&gt;
+Merke: Die Zieladresse steht IMMER zwischen dem Punkt aus Schritt 4 und dem ersten Slash aus Schritt 2 In diesem Beispiel lautet die Zieladresse &lt;b&gt;login.xyz&lt;/b&gt;
 → Alles vor dem Punkt direkt vor &lt;b&gt;login.xyz&lt;/b&gt; gehört nicht zur eigentlichen Domain und kann von Angreifern frei ergänzt werden.
 
 &lt;/div&gt;
@@ -1316,7 +1353,7 @@ Die echte Domain enthält den vollständigen Namen der Bank und endet auf &lt;b&
 
 &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Zum Quiz]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="Zum Quiz" tags="" position="6150,625" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Zum Abschluss: Ein kleines Quiz&lt;/h3&gt; &lt;h4&gt;Kannst du die verdächtigen Adressen erkennen?&lt;/h4&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="Altes Quiz" tags="" position="6075,675" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Zum Abschluss: Ein kleines Quiz&lt;/h3&gt; &lt;h4&gt;Kannst du die verdächtigen Adressen erkennen?&lt;/h4&gt;
 &lt;br&gt;
 &lt;b&gt;1. elsa@vrbank-a-oal-security.de &lt;/b&gt;
 
@@ -1342,7 +1379,7 @@ Die echte Domain enthält den vollständigen Namen der Bank und endet auf &lt;b&
 
 &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Auflösung zeigen]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="Auflösung zeigen" tags="" position="6250,375" size="100,100">&lt;div class=&quot;scene-text&quot;&gt;&lt;h3&gt;Auflösung&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="Auflösung zeigen" tags="" position="6250,675" size="100,100">&lt;div class=&quot;scene-text&quot;&gt;&lt;h3&gt;Auflösung&lt;/h3&gt;
 
 
 &lt;b&gt;1. elza@vrbank-a-oal-security.de&lt;/b&gt;
@@ -1433,18 +1470,19 @@ Die Second-Level Domain: &lt;b&gt;.login&lt;/b&gt;
 Beides verdächtig.
 &lt;/div&gt;
 &lt;div class=&quot;choice-overlay&quot;&gt;
-[[ENDE]]
 &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="ENDE" tags="" position="6400,375" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Vielen Dank für deine Teilnahme!&lt;/h3&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="ENDE" tags="" position="6475,375" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Vielen Dank für Ihre Teilnahme!&lt;/h3&gt;
 
-Du hast das Informationssicherheitstraining erfolgreich abgeschlossen.
-Wir hoffen, dass dir das interaktive Training dabei geholfen hat, verdächtige Situationen besser zu erkennen und Sicherheitsrisiken im Arbeitsalltag schneller einzuordnen.
+Sie haben das Informationssicherheitstraining erfolgreich abgeschlossen.
+Wir hoffen, dass Ihnen das interaktive Training dabei geholfen hat, verdächtige Situationen besser zu erkennen und Sicherheitsrisiken im Arbeitsalltag schneller einzuordnen.
 
 Informationssicherheit beginnt nicht erst bei technischen Systemen – sondern bei aufmerksamen Mitarbeitenden.
 
-Bitte nimm dir noch einen kurzen Moment Zeit und fülle die anschließende Evaluation aus.
+WICHTIGE ERKENNTNISSE
 
-Vielen Dank für deine Unterstützung!
+Bitte nehmen Sie sich noch einen kurzen Moment Zeit und füllen Sie die anschließende Evaluation aus. Diese ist ein wichtiger Teil der Masterarbeit. LINK
+
+Vielen Dank für Ihre Unterstützung!
 
 &lt;div style=&quot;text-align: center;&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P60.png&quot; width=&quot;50%&quot;&gt; &lt;/div&gt;
@@ -1455,6 +1493,259 @@ Vielen Dank für deine Unterstützung!
 
 (link:&quot;← Zurück&quot;)[(undo:)]
 
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="Zum Quiz" tags="" position="6125,375" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Zum Abschluss: Ein kleines Quiz&lt;/h3&gt;
+&lt;h4&gt;Können Sie die verdächtigen Adressen erkennen?&lt;/h4&gt; Prüfen Sie die folgenden E-Mail-Adressen. Entscheiden Sie jeweils, ob die Adresse **legitim** oder **verdächtig** ist
+
+
+
+**1. elza@vrbank-a-oal-security.de**
+
+&lt;div class=&quot;quiz-buttons&quot;&gt;
+(link: &quot;✅ Legitim&quot;)[
+	(replace: ?mail1)[
+		&lt;div class=&quot;quiz-feedback&quot;&gt;		**Leider falsch. Richtig wäre ⚠️ Verdächtig**
+
+		Die richtige Domain lautet: **vrbank-a-oal.de**
+
+		Der Zusatz **security** soll vertrauenswürdig wirken, gehört aber nicht zur echten Domain der Bank
+
+		Auch **elza** am Anfang ist falsch. Richtig wäre **elsa**
+
+		&lt;/div&gt;
+	]
+]
+
+(link: &quot;⚠️ Verdächtig&quot;)[
+	(replace: ?mail1)[
+		&lt;div class=&quot;quiz-feedback&quot;&gt;		**Richtig, diese Adresse ist verdächtig**
+
+		Die richtige Domain lautet: **vrbank-a-oal.de**
+
+		Der Zusatz **security** soll vertrauenswürdig wirken, gehört aber nicht zur echten Domain der Bank
+
+		Auch **elza** am Anfang ist falsch. Richtig wäre **elsa**
+
+		&lt;/div&gt;
+	]
+]
+&lt;/div&gt;
+
+|mail1&gt;[]
+
+
+**2. elsa@vrbank-a-oal.de**
+
+&lt;div class=&quot;quiz-buttons&quot;&gt;
+(link: &quot;✅ Legitim&quot;)[
+	(replace: ?mail2)[
+		&lt;div class=&quot;quiz-feedback&quot;&gt;		**Richtig, diese Adresse ist legitim**
+
+		Die Adresse nutzt die echte Domain: **vrbank-a-oal.de**
+
+		Dies ist die echte E-Mail-Adresse der IT für die Filiale
+
+		&lt;/div&gt;
+	]
+]
+
+(link: &quot;⚠️ Verdächtig&quot;)[
+	(replace: ?mail2)[
+		&lt;div class=&quot;quiz-feedback&quot;&gt; **Leider falsch. Diese Adresse ist legitim**
+
+		Die Adresse nutzt die echte Domain: **vrbank-a-oal.de**
+
+		Dies ist die echte E-Mail-Adresse der IT für die Filiale
+
+		&lt;/div&gt;
+	]
+]
+&lt;/div&gt;
+
+|mail2&gt;[]
+
+
+**3. support@vrbank.de.security-check.com**
+
+&lt;div class=&quot;quiz-buttons&quot;&gt;
+(link: &quot;✅ Legitim&quot;)[
+	(replace: ?mail3)[
+		&lt;div class=&quot;quiz-feedback&quot;&gt;			 **Leider falsch. Richtig wäre ⚠️ Verdächtig**
+
+		Die Zieladresse lautet: **security-check.com**
+
+		Alles davor kann täuschend wirken
+
+		Auch die Endung **.com** ist ein Hinweis auf eine verdächtige E-Mail-Adresse
+
+		&lt;/div&gt;
+	]
+]
+
+(link: &quot;⚠️ Verdächtig&quot;)[
+	(replace: ?mail3)[
+		&lt;div class=&quot;quiz-feedback&quot;&gt;		**Richtig, diese Adresse ist verdächtig**
+
+		Die Zieladresse lautet: **security-check.com**
+
+		Alles davor kann täuschend wirken
+
+		Auch die Endung **.com** ist ein Hinweis auf eine verdächtige E-Mail-Adresse
+
+		&lt;/div&gt;
+	]
+]
+&lt;/div&gt;
+
+|mail3&gt;[]
+
+
+&lt;div class=&quot;choice-overlay&quot;&gt; 
+[[Weiter mit Internetadressen]] 
+&lt;/div&gt; &lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="60" name="Weiter mit Internetadressen" tags="" position="6300,375" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Quiz: Internetadressen prüfen&lt;/h3&gt;
+&lt;h4&gt;Können Sie die verdächtigen Internetadressen erkennen?&lt;/h4&gt; Prüfen Sie die folgenden Internetadressen. Entscheiden Sie jeweils, ob die Adresse **legitim** oder **verdächtig** ist
+
+
+
+**1. Welche Zieladresse steckt in dieser Internetadresse?**
+
+**https:&amp;#47;&amp;#47;service.vrbank-a-oal.de.kundenportal-login.com/start**
+
+&lt;div class=&quot;quiz-buttons&quot;&gt;
+(link: &quot;service.vrbank-a-oal.de&quot;)[
+	(replace: ?url1)[
+		&lt;div class=&quot;quiz-feedback&quot;&gt;		⚠️ **Nicht ganz**
+
+		**service.vrbank-a-oal.de** wirkt zwar legitim, ist aber nicht die eigentliche Zieladresse
+
+		Die Zieladresse lautet: **kundenportal-login.com**. Alles davor kann täuschend wirken.
+        
+		Erinnern Sie sich: Entscheidend ist nicht der Anfang der Adresse, sondern die eigentliche Zieladresse. Gehen Sie von https:// nach rechts bis zum ersten Slash /. Gehen Sie dann nach links bis zum ersten Punkt. Gehen Sie anschließend noch weiter nach links bis zum nächsten Punkt. Alles zwischen diesem zweiten Punkt und dem ersten Slash gehört immer zur Zieladresse.
+		&lt;/div&gt;
+	]
+]
+
+(link: &quot;vrbank-a-oal.de&quot;)[
+	(replace: ?url1)[
+		&lt;div class=&quot;quiz-feedback&quot;&gt;		⚠️ **Nicht ganz**
+
+		Die echte Bankdomain **vrbank-a-oal.de** kommt zwar in der Adresse vor, ist hier aber nicht die eigentliche Zieladresse
+
+		Die Zieladresse lautet: **kundenportal-login.com**. Alles davor kann täuschend wirken.
+        
+		Erinnern Sie sich: Entscheidend ist nicht der Anfang der Adresse, sondern die eigentliche Zieladresse. Gehen Sie von https:// nach rechts bis zum ersten Slash /. Gehen Sie dann nach links bis zum ersten Punkt. Gehen Sie anschließend noch weiter nach links bis zum nächsten Punkt. Alles zwischen diesem zweiten Punkt und dem ersten Slash gehört immer zur Zieladresse.
+		&lt;/div&gt;
+	]
+]
+
+(link: &quot;kundenportal-login.com&quot;)[
+	(replace: ?url1)[
+		&lt;div class=&quot;quiz-feedback&quot;&gt;		✅ **Richtig**
+
+		Die Zieladresse lautet: **kundenportal-login.com**. Alles davor kann täuschend wirken.
+        
+		Erinnern Sie sich: Entscheidend ist nicht der Anfang der Adresse, sondern die eigentliche Zieladresse. Gehen Sie von https:// nach rechts bis zum ersten Slash /. Gehen Sie dann nach links bis zum ersten Punkt. Gehen Sie anschließend noch weiter nach links bis zum nächsten Punkt. Alles zwischen diesem zweiten Punkt und dem ersten Slash gehört immer zur Zieladresse.
+
+		&lt;/div&gt;
+	]
+]
+&lt;/div&gt;
+
+|url1&gt;[]
+
+
+**2. Legitim oder nicht? 
+https:&amp;#47;&amp;#47;www.vrbank-security.com/login**
+
+&lt;div class=&quot;quiz-buttons&quot;&gt;
+(link: &quot;✅ Legitim&quot;)[
+	(replace: ?url2)[
+		&lt;div class=&quot;quiz-feedback&quot;&gt;		**Leider falsch. Richtig wäre ⚠️ Verdächtig**
+
+		Die Adresse enthält zwar **vrbank**, gehört dadurch aber nicht automatisch zur echten Bank
+
+		Der Zusatz **security** ist auffällig und soll vertrauenswürdig wirken
+
+		Auch die Endung **.com** ist ein weiterer Hinweis auf eine verdächtige Adresse
+
+		&lt;/div&gt;
+	]
+]
+
+(link: &quot;⚠️ Verdächtig&quot;)[
+	(replace: ?url2)[
+		&lt;div class=&quot;quiz-feedback&quot;&gt;		**Richtig, diese Adresse ist verdächtig**
+
+		Die Adresse enthält zwar **vrbank**, gehört dadurch aber nicht automatisch zur echten Bank
+
+		Der Zusatz **security** ist auffällig und soll vertrauenswürdig wirken
+
+		Auch die Endung **.com** ist ein weiterer Hinweis auf eine verdächtige Adresse
+
+		&lt;/div&gt;
+	]
+]
+&lt;/div&gt;
+
+|url2&gt;[]
+
+
+**3. Legitim oder nicht? 
+https:&amp;#47;&amp;#47;vrbank-augsburg-ostallgaeu.de.login.xyz**
+
+&lt;div class=&quot;quiz-buttons&quot;&gt;
+(link: &quot;✅ Legitim&quot;)[
+	(replace: ?url3)[
+		&lt;div class=&quot;quiz-feedback&quot;&gt;		 **Leider falsch. Richtig wäre ⚠️ Verdächtig**
+
+		Die Zieladresse lautet: **login.xyz**
+
+		Der Teil davor, also **vrbank-augsburg-ostallgaeu.de**, soll nur legitim wirken
+
+		Die Endung der Zieladresse ist **.xyz**
+
+		Das ist ein deutlicher Hinweis auf eine verdächtige Adresse
+
+		&lt;/div&gt;
+	]
+]
+
+(link: &quot;⚠️ Verdächtig&quot;)[
+	(replace: ?url3)[
+		&lt;div class=&quot;quiz-feedback&quot;&gt;		**Richtig, diese Adresse ist verdächtig**
+
+		Die Zieladresse lautet: **login.xyz**
+
+		Der Teil davor, also **vrbank-augsburg-ostallgaeu.de**, soll nur legitim wirken
+
+		Die Endung der Zieladresse ist **.xyz**
+
+		Das ist ein deutlicher Hinweis auf eine verdächtige Adresse
+
+		&lt;/div&gt;
+	]
+]
+&lt;/div&gt;
+
+|url3&gt;[]
+
+
+&lt;div class=&quot;choice-overlay&quot;&gt; 
+[[ENDE]] 
+&lt;/div&gt; &lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="Weiter zum Termin" tags="" position="1900,575" size="100,100">&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;scene-text&quot;&gt; Mit etwas Verspätung macht sich Max nun auf den Weg zu seinem Termin mit Frau Schneider. 
+&lt;/div&gt;
+
+&lt;div class=&quot;comic-panel&quot;&gt;
+ &lt;img src=&quot;Comic_Panels/P9_2.png&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max ist mitten im gut laufendem Meeting. Es wäre unprofessionell dieses jetzt zu beenden.
+&lt;/div&gt;
+
+  &lt;div class=&quot;choice-overlay&quot;&gt;
+[[Meeting forsetzen]]
+[[Meeting unterbrechen]]
 &lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
