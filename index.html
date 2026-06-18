@@ -13,7 +13,7 @@
   position: fixed;
 
   top: 16px;
-  right: 16px;
+  left: 16px;
 
   z-index: 9999;
 
@@ -167,12 +167,14 @@ tw-story {
 .progress-bar {
   position: relative;
 
-  width: 70%;
-  max-width: 900px;
+  width: 975px;
+  max-width: calc(100vw - 145px);
 
   height: 8px;
 
-  margin: 0 auto 12px auto;
+  margin-left: calc((100vw - 1100px) / 2 + 75px);
+  margin-right: 0;
+  margin-bottom: 12px;
 
   border-radius: 999px;
 
@@ -200,7 +202,7 @@ tw-story {
 
   position: absolute;
 
-  right: -40px;
+  right: -50px;
   top: 50%;
 
   transform: translateY(-50%);
@@ -210,6 +212,7 @@ tw-story {
   font-size: 13px;
   font-weight: bold;
 }
+
 .progress-0 {
   background: #2a3544;
 }
@@ -253,6 +256,7 @@ tw-story {
     #2a3544 100%
   );
 }
+
 .progress-60 {
   background: linear-gradient(
     90deg,
@@ -274,14 +278,9 @@ tw-story {
 }
 
 .progress-100 {
-  background: linear-gradient(
-    90deg,
-    #8fa8c4 0%,
-    #8fa8c4 100%,
-    #8fa8c4 100%,
-    #8fa8c4 100%
-  );
+  background: #8fa8c4;
 }
+
 .quiz-buttons {
   display: flex;
   gap: 16px;
@@ -325,17 +324,17 @@ tw-story {
 }
 
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Start" tags="" position="250,575" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;scene-text&quot;&gt; Der Tag beginnt. Es ist kurz vor Arbeitsbeginn und Max hat noch einige Meter vor sich.
-&lt;/div&gt;
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Start" tags="" position="250,575" size="100,100">
+&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Der Tag beginnt. Es ist kurz vor Arbeitsbeginn und Max hat noch einige Meter vor sich.&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P1_1.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
     [[Nächstes Panel]]
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Kaffee holen" tags="" position="775,825" size="100,100">&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Kaffee holen" tags="" position="775,825" size="100,100">
+&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P3.png&quot;&gt;
@@ -350,12 +349,11 @@ tw-story {
 
 
 
-</tw-passagedata><tw-passagedata pid="3" name="Tisch aufräumen" tags="" position="725,400" size="100,100">&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="3" name="Tisch aufräumen" tags="" position="725,400" size="100,100">
+&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
-&lt;img src=&quot;Comic_Panels/P2.png&quot;&gt;
-
-&lt;div class=&quot;scene-text&quot;&gt; Der Tisch sieht jetzt schon viel besser aus. Jetzt kann sich Max ganz der Arbeit widmen.
+&lt;img src=&quot;Comic_Panels/P2.png&quot;&gt; &lt;div class=&quot;scene-text&quot;&gt; Der Tisch sieht jetzt schon viel besser aus. Jetzt kann sich Max ganz der Arbeit widmen.
 &lt;/div&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -365,12 +363,11 @@ tw-story {
 
 
 
-</tw-passagedata><tw-passagedata pid="4" name="IT kontaktieren" tags="" position="1125,275" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="4" name="IT kontaktieren" tags="" position="1125,275" size="100,100">
+&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max ist sich unsicher und kontakiert direkt die IT.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P6.png&quot;&gt;
 &lt;div class=&quot;scene-text&quot;&gt; Max fühlt sich betsätigt, da er nicht auf den Angriff reingefallen ist. Er kann nun zum ersten Kundentermin
 &lt;/div&gt;
@@ -385,12 +382,11 @@ tw-story {
 
 
 
-</tw-passagedata><tw-passagedata pid="5" name="E-Mail Programm öffnen" tags="" position="875,625" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="5" name="E-Mail Programm öffnen" tags="" position="875,625" size="100,100">
+&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max öffnet sein E-Mail Programm. Er hat den Großteil der Mails beantwortet, jedoch sticht ihm eine besonders ins Auge. 
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P4.png&quot;&gt;
 &lt;div class=&quot;scene-text&quot;&gt;Die Zeit drängt. Max hat gleich einen Kundentermin. Wie soll er sich entscheiden?
 &lt;/div&gt;
@@ -407,12 +403,10 @@ tw-story {
 
 
 
-</tw-passagedata><tw-passagedata pid="6" name="Intranet öffnen" tags="" position="1125,500" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="6" name="Intranet öffnen" tags="" position="1125,500" size="100,100">
+&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max öffnet die interne Webseite und schaut nach auffälligen Meldungen.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max öffnet die interne Webseite und schaut nach auffälligen Meldungen. &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P5.png&quot;&gt;
 &lt;div class=&quot;scene-text&quot;&gt; In der Tat gehen gerade Phishing Mails rum. Max erinnert sich an das letzte Sicherheitstraining und weiß, dass er solche Mails melden soll.
 &lt;/div&gt;
@@ -425,12 +419,11 @@ tw-story {
 
 
 
-</tw-passagedata><tw-passagedata pid="7" name="Daten eingeben" tags="" position="1075,700" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="7" name="Daten eingeben" tags="" position="1075,700" size="100,100">
+&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max will nichts riskieren und gibt seine Daten ein.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P7.png&quot;&gt;
 &lt;div class=&quot;scene-text&quot;&gt; Nachdem er die Bestätigung erhalten hat geht Max zu seinem ersten Kundentermin.
 &lt;/div&gt;
@@ -445,11 +438,10 @@ tw-story {
 
 
 
-</tw-passagedata><tw-passagedata pid="8" name="Zum Kundentermin" tags="" position="1300,350" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="8" name="Zum Kundentermin" tags="" position="1300,350" size="100,100">
+&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Der Kundentermin lief gut. Max geht wieder zu seinem Arbeitsplatz &lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Der Kundentermin lief gut. Max geht wieder zu seinem Arbeitsplatz &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P12_1.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -457,12 +449,11 @@ tw-story {
 [[Benutzer nicht bestätigen]]
   &lt;/div&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="9" name="Zum Termin" tags="" position="1275,675" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="9" name="Zum Termin" tags="" position="1275,675" size="100,100">
+&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt;  Der Kundentermin lief gut. Max geht wieder zu seinem Arbeitsplatz.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P8_1.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -470,11 +461,10 @@ tw-story {
   &lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="10" name="Zugriff erlauben" tags="" position="1775,750" size="100,100">&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="10" name="Zugriff erlauben" tags="" position="1775,750" size="100,100">
+&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max folgt den Anweisungen des IT-Mitarbeiters und gibt den Zugriff auf seinen PC frei.&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max folgt den Anweisungen des IT-Mitarbeiters und gibt den Zugriff auf seinen PC frei.&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
  &lt;img src=&quot;Comic_Panels/P9_1.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -482,12 +472,11 @@ tw-story {
   &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="11" name="Weiter mit dem Telefonat" tags="" position="1450,600" size="100,100">&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="11" name="Weiter mit dem Telefonat" tags="" position="1450,600" size="100,100">
+&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Das Telefonat geht weiter:
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P8_2.png&quot;&gt;   
   &lt;div class=&quot;choice-overlay&quot;&gt;
 
@@ -497,12 +486,11 @@ tw-story {
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="12" name="Nachhaken" tags="" position="1575,750" size="100,100">&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="12" name="Nachhaken" tags="" position="1575,750" size="100,100">
+&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Bevor Max richtig nachfragen kann, spricht der IT-Mitarbeiter weiter:
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P8_3.png&quot;&gt;
 &lt;div class=&quot;scene-text&quot;&gt; Wenn er sogar den nächsten Termin kennt, muss er ja schon Zugriff auf interne Daten haben. 
 &lt;/div&gt;
@@ -514,12 +502,10 @@ tw-story {
 
 
 
-</tw-passagedata><tw-passagedata pid="13" name="Misstrauisch bleiben" tags="" position="2050,300" size="100,100">&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="13" name="Misstrauisch bleiben" tags="" position="2050,300" size="100,100">
+&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max ist immer noch skeptisch und prüft die Identität des Anrufers.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max ist immer noch skeptisch und prüft die Identität des Anrufers. &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P8_4.png&quot;&gt;
 &lt;div class=&quot;scene-text&quot;&gt; Nach Rücksprache mit der IT ist Max glücklich darüber, dass er nachgehakt hat. Er wäre fast zum Opfer eines Social Engineering Angriffs geworden.
 &lt;/div&gt;
@@ -530,12 +516,11 @@ tw-story {
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="14" name="Meeting forsetzen" tags="" position="2050,750" size="100,100">&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="14" name="Meeting forsetzen" tags="" position="2050,750" size="100,100">
+&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max setzt das Meeting fort. Währenddessen bahnt sich eine Katastrophe an.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P9_3.png&quot;&gt;
 &lt;div class=&quot;scene-text&quot;&gt; Max wird sich langsam bewusst, dass er einen großen Fehler begangen hat.
 &lt;/div&gt;
@@ -546,30 +531,28 @@ tw-story {
 &lt;/div&gt;
 
  
-</tw-passagedata><tw-passagedata pid="15" name="Meeting unterbrechen" tags="" position="2050,450" size="100,100">&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="15" name="Meeting unterbrechen" tags="" position="2050,450" size="100,100">
+&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max unterbricht sofot das Meeting. So eine Warnung darf nicht ignoriert werden. &lt;/div&gt;
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max unterbricht sofot das Meeting. So eine Warnung darf nicht ignoriert werden. &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P10.png&quot;&gt;
 &lt;div class=&quot;scene-text&quot;&gt; Max ist froh gerade noch rechtzeitig reagiert zu haben. Max hat nicht alles perfekt gemacht ,aber durch das sofortige Unterbrechen des Meetings konnte die IT größere Schäden verhindern. &lt;/div&gt;
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Tag beenden]]
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="16" name="Weiter" tags="" position="2225,750" size="100,100">&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="16" name="Weiter" tags="" position="2225,750" size="100,100">
+&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Die Folgen sind gravierend: Kunden, Mitarbeitende und die gesamte Bank sind nun von den Konsequenzen betroffen. &lt;/div&gt;
-&lt;div class=&quot;comic-panel&quot;&gt;
-  &lt;img src=&quot;Comic_Panels/P9_4.png&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Die Folgen sind gravierend: Kunden, Mitarbeitende und die gesamte Bank sind nun von den Konsequenzen betroffen. &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;  &lt;img src=&quot;Comic_Panels/P9_4.png&quot;&gt;
 &lt;/div&gt;
 
  &lt;div class=&quot;choice-overlay&quot;&gt;
-[[Was ist passiert?]] &lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Benutzer bestätigen" tags="" position="1550,375" size="100,100">&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
+[[Was ist passiert?]] &lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Benutzer bestätigen" tags="" position="1550,375" size="100,100">
+&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max bestätigt den Benutzer. Das Telefonat geht weiter:
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P12_2.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -581,12 +564,11 @@ tw-story {
  
 
  
-</tw-passagedata><tw-passagedata pid="18" name="Benutzer nicht bestätigen" tags="" position="1500,225" size="100,100">&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="18" name="Benutzer nicht bestätigen" tags="" position="1500,225" size="100,100">
+&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max bleibt zurückhaltend und bestätigt nicht seinen Benutzernamen.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P13.png&quot;&gt;
   &lt;div class=&quot;choice-overlay&quot;&gt;
 (if: $startwahl is &quot;kaffee&quot; or $startwahl is &quot;email&quot;)[
@@ -596,12 +578,11 @@ tw-story {
 [[Ablehnen -&gt;Misstrauisch bleiben]]          [[Benutzer bestätigen]] 
 ]
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="19" name="Telefonat weiterführen" tags="" position="1700,75" size="100,100">&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="19" name="Telefonat weiterführen" tags="" position="1700,75" size="100,100">
+&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Das Telefonat geht weiter.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P8_3.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -611,12 +592,11 @@ tw-story {
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="20" name="Mail-Programm öffnen" tags="" position="875,250" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="20" name="Mail-Programm öffnen" tags="" position="875,250" size="100,100">
+&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Nachdem Max die sensiblen Dokumente aufgeräumt und weggesperrt hat setzt er sich an seinen Tisch und öffnet sein Mail-Programm.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
  &lt;img src=&quot;Comic_Panels/P11.png&quot;&gt;
 &lt;div class=&quot;scene-text&quot;&gt;Die Zeit drängt. Max hat gleich einen Kundentermin. Wie soll er sich entscheiden?
 &lt;/div&gt;
@@ -631,18 +611,18 @@ tw-story {
 
 
 
-</tw-passagedata><tw-passagedata pid="21" name="Nächstes Panel" tags="" position="400,700" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="21" name="Nächstes Panel" tags="" position="400,700" size="100,100">
+&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt;Max bleibt misstrauisch und verweigert dem unbekannten Mann den Zutritt zur Filiale. Doch der Mann gibt nicht auf.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
 &lt;img src=&quot;Comic_Panels/P1_2.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
     [[Zurück zu Max]] 
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Zurück zu Max" tags="" position="550,575" size="100,100">&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Zurück zu Max" tags="" position="550,575" size="100,100">
+&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;comic-panel&quot;&gt;
  &lt;img src=&quot;Comic_Panels/P1_3.png&quot;&gt;
@@ -710,9 +690,7 @@ color:#1f2937;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Start Tag 2" tags="" position="2500,350" size="100,100">&lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Ein neuer Tag bricht an. Max sitzt an seinem gewohnten Platz und fährt seinen PC hoch.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P14.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -755,36 +733,33 @@ color:#1f2937;
   &lt;img src=&quot;Comic_Panels/P91.png&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P92.png&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P93.png&quot;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Kennwort aktualisieren" tags="" position="2725,425" size="100,100">&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Kennwort aktualisieren" tags="" position="2725,425" size="100,100">
+&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Durch den Vorfall gestern will Max kein Risiko eingehen und aktualisert direkt sein Passwort.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P15.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
  [[Zeit für eine kurze Pause]]   
   &lt;/div&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="26" name="Kollegin fragen" tags="" position="2725,275" size="100,100">&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="26" name="Kollegin fragen" tags="" position="2725,275" size="100,100">
+&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max will sich sicher gehen und geht zu seiner Kollegin Anna um nachzufragen.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P16.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Zeit für eine kurze Pause]]
   &lt;/div&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="27" name="Zeit für eine kurze Pause" tags="" position="2900,350" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="27" name="Zeit für eine kurze Pause" tags="" position="2900,350" size="100,100">
+&lt;div class=&quot;progress-bar progress-10&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max hat einige Sachen abgearbeitet. Er hat sich eine kleine Pause verdient.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P90.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -794,33 +769,30 @@ color:#1f2937;
   &lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="28" name="Zur Kantine" tags="" position="3100,350" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="28" name="Zur Kantine" tags="" position="3100,350" size="100,100">
+&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Sie entscheiden sich für die Kantine. 
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P92.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Zurück zum Arbeitsplatz]]
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="29" name="Spazieren" tags="" position="3100,475" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="29" name="Spazieren" tags="" position="3100,475" size="100,100">
+&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Sie entscheiden sich kurz an die frische Luft zu gehen.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P93.png&quot;&gt;
 
  &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Zurück zum Arbeitsplatz]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Kaffeepause" tags="" position="3100,225" size="100,100">&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Kaffeepause" tags="" position="3100,225" size="100,100">
+&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Sie gehen zusammen in die Küche und bereiten sich einen Kaffee zu. &lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Sie gehen zusammen in die Küche und bereiten sich einen Kaffee zu. &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P91.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -1802,12 +1774,10 @@ https:&amp;#47;&amp;#47;vrbank-augsburg-ostallgaeu.de.login.xyz**
 
 &lt;div class=&quot;choice-overlay&quot;&gt; 
 [[ENDE]] 
-&lt;/div&gt; &lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="Weiter zum Termin" tags="" position="1900,575" size="100,100">&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
+&lt;/div&gt; &lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="Weiter zum Termin" tags="" position="1900,575" size="100,100">
+&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Mit etwas Verspätung macht sich Max nun auf den Weg zu seinem Termin mit Frau Schneider. 
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Mit etwas Verspätung macht sich Max nun auf den Weg zu seinem Termin mit Frau Schneider.  &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
  &lt;img src=&quot;Comic_Panels/P9_2.png&quot;&gt;
 &lt;div class=&quot;scene-text&quot;&gt; Max ist mitten im gut laufendem Meeting. Es wäre unprofessionell dieses jetzt zu beenden.
 &lt;/div&gt;
@@ -1815,12 +1785,11 @@ https:&amp;#47;&amp;#47;vrbank-augsburg-ostallgaeu.de.login.xyz**
   &lt;div class=&quot;choice-overlay&quot;&gt;
 [[Meeting forsetzen]]
 [[Meeting unterbrechen]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="62" name="Zurück zum Arbeitsplatz" tags="" position="3325,325" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="62" name="Zurück zum Arbeitsplatz" tags="" position="3325,325" size="100,100">
+&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt;Nach der Pause setzt sich Max zurück auf seinen Platz. Kaum hingesetzt klingelt schon das Telefon.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P17_1.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -1830,11 +1799,10 @@ https:&amp;#47;&amp;#47;vrbank-augsburg-ostallgaeu.de.login.xyz**
 
 
 
-</tw-passagedata><tw-passagedata pid="63" name="Telefonat fortsetzen" tags="" position="3500,275" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="63" name="Telefonat fortsetzen" tags="" position="3500,275" size="100,100">
+&lt;div class=&quot;progress-bar progress-20&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max hat sein Headset aufgesetzt. So kann er dem aufgeregten Herrn Weber besser zuhören und ihn unterstützen. &lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max hat sein Headset aufgesetzt. So kann er dem aufgeregten Herrn Weber besser zuhören und ihn unterstützen. &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P17_2.png&quot;&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max überlegt, ob er eine weiche Legitimation, eine harte Legitimation oder überhaupt eine Legitimation nutzen soll.
@@ -1848,11 +1816,10 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
 [[ohne Legitimation sofort helfen -&gt;Auftrag freigeben]] 
   &lt;/div&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="64" name="harte Legitimation" tags="" position="3675,500" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="64" name="harte Legitimation" tags="" position="3675,500" size="100,100">
+&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max entscheidet sich für die harte Legitimation. Stellt davor aber noch eine Frage. &lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max entscheidet sich für die harte Legitimation. Stellt davor aber noch eine Frage. &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P19_1.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -1861,11 +1828,10 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="65" name="weiche Legitimation" tags="" position="3700,300" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="65" name="weiche Legitimation" tags="" position="3700,300" size="100,100">
+&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max zögert kurz, entscheidet sich dann aber für die weiche Legitimation. Herr Weber wirkt verzweifelt, und Max möchte ihm unbedingt helfen. &lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max zögert kurz, entscheidet sich dann aber für die weiche Legitimation. Herr Weber wirkt verzweifelt, und Max möchte ihm unbedingt helfen. &lt;/div&gt;&lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P18_1.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -1876,15 +1842,13 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
 
 
 
-</tw-passagedata><tw-passagedata pid="66" name="Gespräch fortführen" tags="" position="3875,500" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="66" name="Gespräch fortführen" tags="" position="3875,500" size="100,100">
+&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Das Gespräch geht weiter.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P19_2.png&quot;&gt;
 
-  
  &lt;div class=&quot;scene-text&quot;&gt;Max hat Recht. Bei kleineren Beträgen bis 500 € reicht in bestimmten Fällen auch eine weiche Legitimation aus.
  &lt;/div&gt;
 
@@ -1894,12 +1858,11 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="67" name="Zur Sicherheitsfrage" tags="" position="3900,250" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="67" name="Zur Sicherheitsfrage" tags="" position="3900,250" size="100,100">
+&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Weiter geht es mit der Sicherheitsfrage.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P18_2.png&quot;&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Auch diese beantwortet Herr Weber richtig.
@@ -1911,12 +1874,11 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="68" name="Auftrag freigeben" tags="" position="4175,125" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="68" name="Auftrag freigeben" tags="" position="4175,125" size="100,100">
+&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max hilft Herr Weber und gibt den Auftrag frei.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P20.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -1924,12 +1886,11 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="69" name="Auf harte Legitimation bestehen" tags="" position="4100,550" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="69" name="Auf harte Legitimation bestehen" tags="" position="4100,550" size="100,100">
+&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Herr Weber scheint zunehmend verzweifelt.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P19_3.png&quot;&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max überlegt noch einmal. Wenn Herr Weber wirklich in Zeitnot ist, könnte dies seine letzte Chance sein, ihm zu helfen. &lt;/div&gt;
@@ -1938,11 +1899,10 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
 [[Doch Kooperieren-&gt;weiche Legitimation]]
 [[Konsequent bleiben]]
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="70" name="Konsequent bleiben" tags="" position="4375,575" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="70" name="Konsequent bleiben" tags="" position="4375,575" size="100,100">
+&lt;div class=&quot;progress-bar progress-60&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max bleibt ruhig, aber konsequent. Er besteht auf einer harten Legitimation. Herr Weber reagiert verärgert. &lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max bleibt ruhig, aber konsequent. Er besteht auf einer harten Legitimation. Herr Weber reagiert verärgert. &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P19_4.png&quot;&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Das abrupte Ende des Gesprächs lässt Max unsicher zurück. Der Anruf wirkt im Nachhinein ungewöhnlich. &lt;/div&gt;
@@ -1952,11 +1912,10 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
 [[Telefonat melden]]
   &lt;/div&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="71" name="Auftrag doch zuerst absichern" tags="" position="4100,350" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="71" name="Auftrag doch zuerst absichern" tags="" position="4100,350" size="100,100">
+&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Obwohl Herr Weber die Fragen richtig beantwortet hat, ist Max sich unsicher. &lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Obwohl Herr Weber die Fragen richtig beantwortet hat, ist Max sich unsicher. &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P18_3.png&quot;&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Herr Weber scheint einen wichtigen Termin zu haben, den er nicht verpassen darf. &lt;/div&gt;
@@ -1969,11 +1928,10 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
 
 
 
-</tw-passagedata><tw-passagedata pid="72" name="keine Freigabe" tags="" position="4300,375" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
-2
-&lt;div class=&quot;scene-text&quot;&gt; Max zweifelt weiterhin. Er will den Auftrag nicht mehr freigeben. &lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="72" name="keine Freigabe" tags="" position="4300,375" size="100,100">
+&lt;div class=&quot;progress-bar progress-50&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max zweifelt weiterhin. Er will den Auftrag nicht mehr freigeben. &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P18_4.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -1984,11 +1942,10 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
 
 
 
-</tw-passagedata><tw-passagedata pid="73" name="Überweisung ausführen" tags="" position="4400,225" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="73" name="Überweisung ausführen" tags="" position="4400,225" size="100,100">
+&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Die Überweisung wurde ausgeführt. Kurz darauf klingelt bei Max erneut das Telefon. Am Apparat ist Herr Weber – der echte Herr Weber. &lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Die Überweisung wurde ausgeführt. Kurz darauf klingelt bei Max erneut das Telefon. Am Apparat ist Herr Weber – der echte Herr Weber. &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P21.png&quot;&gt;
   
 &lt;div class=&quot;scene-text&quot;&gt; Max erkennt seinen Fehler: Er wurde von einem Betrüger getäuscht. Er schämt sich und ist unsicher. Soll er den Vorfall seinem Vorgesetzten melden? &lt;/div&gt;  
@@ -2000,11 +1957,10 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="74" name="Fehler eingestehen" tags="" position="4625,400" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="74" name="Fehler eingestehen" tags="" position="4625,400" size="100,100">
+&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max gesteht seinen Fehler ein und meldet den Vorfall. Kurz darauf zeigt sich: Er hat richtig gehandelt. &lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max gesteht seinen Fehler ein und meldet den Vorfall. Kurz darauf zeigt sich: Er hat richtig gehandelt. &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P23.png&quot;&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Der Angreifer versucht es auch bei anderen Mitarbeitenden. Durch Max’ Meldung sind diese jedoch gewarnt und fallen nicht darauf herein. So bleibt der Schaden auf die bereits ausgeführte Überweisung begrenzt. &lt;/div&gt;
@@ -2016,12 +1972,11 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
 
 
 
-</tw-passagedata><tw-passagedata pid="75" name="Fehler nicht zugeben" tags="" position="4575,200" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="75" name="Fehler nicht zugeben" tags="" position="4575,200" size="100,100">
+&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Max schämt sich und meldet den Vorfall nicht. Er versucht, den echten Herrn Weber zu beruhigen und hofft, dass sich die Situation klärt. Doch das erweist sich als großer Fehler.
-&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P22.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -2029,11 +1984,10 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="76" name="nächste Szene" tags="" position="4750,200" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="76" name="nächste Szene" tags="" position="4750,200" size="100,100">
+&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Durch das Abwarten kann der Angreifer weitere Mitarbeitende kontaktieren. Er hat erneut Erfolg und verursacht weiteren finanziellen Schaden. Wenig später wird Max zu seinem Vorgesetzten gerufen.&lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Durch das Abwarten kann der Angreifer weitere Mitarbeitende kontaktieren. Er hat erneut Erfolg und verursacht weiteren finanziellen Schaden. Wenig später wird Max zu seinem Vorgesetzten gerufen.&lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P24.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -2045,11 +1999,10 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
 
 
 
-</tw-passagedata><tw-passagedata pid="77" name="weiter arbeiten" tags="" position="4650,600" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="77" name="weiter arbeiten" tags="" position="4650,600" size="100,100">
+&lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Max ist zwar vom plötzlichen Ende des Gesprächs überrascht, denkt sich aber nichts weiter dabei und arbeitet weiter. Ein Fehler. &lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Max ist zwar vom plötzlichen Ende des Gesprächs überrascht, denkt sich aber nichts weiter dabei und arbeitet weiter. Ein Fehler. &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P25_1.png&quot;&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Später stellt sich heraus: Der vermeintliche Herr Weber war ein Angreifer. Weil der Vorfall nicht gemeldet wurde, versucht er es bei einem anderen Mitarbeitenden erneut – diesmal mit Erfolg. Eine frühzeitige Meldung hätte das verhindern können. &lt;/div&gt;
@@ -2059,11 +2012,10 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="78" name="Telefonat melden" tags="" position="4650,800" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="78" name="Telefonat melden" tags="" position="4650,800" size="100,100">
+&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Der Max meldet den Vorfall. Es zeigt sich: Max hat richtig reagiert. Das Melden war wichtig. &lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Der Max meldet den Vorfall. Es zeigt sich: Max hat richtig reagiert. Das Melden war wichtig. &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P26.png&quot;&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Wie sich später herausstellt, war der Anruf Teil eines Social-Engineering-Angriffs. Durch Max’ Meldung konnten andere Mitarbeitende gewarnt und mögliche Schäden verhindert werden. &lt;/div&gt;
@@ -2073,11 +2025,10 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="79" name="Weiter zum Vorgesetzten" tags="" position="4800,500" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="79" name="Weiter zum Vorgesetzten" tags="" position="4800,500" size="100,100">
+&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Wenig später bittet der Vorgesetzte Max zu einem Gespräch. Dort erfährt Max, dass er als Erster von dem Angreifer kontaktiert wurde. Eine Meldung seines ungewöhnlichen Anrufs hätte andere Mitarbeitende warnen können &lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Wenig später bittet der Vorgesetzte Max zu einem Gespräch. Dort erfährt Max, dass er als Erster von dem Angreifer kontaktiert wurde. Eine Meldung seines ungewöhnlichen Anrufs hätte andere Mitarbeitende warnen können &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P25_2.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
@@ -2086,11 +2037,10 @@ Harte Legitimation: Prüfung über die VRSecureGoplus App. &lt;/div&gt;
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="80" name="alter Tag 2" tags="" position="5225,1500" size="100,100">dies ist die story vom alten Tag2</tw-passagedata><tw-passagedata pid="81" name="Die Konsequenzen" tags="" position="4925,250" size="100,100">&lt;div class=&quot;progress-bar progress-40&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="80" name="alter Tag 2" tags="" position="5225,1500" size="100,100">dies ist die story vom alten Tag2</tw-passagedata><tw-passagedata pid="81" name="Die Konsequenzen" tags="" position="4925,250" size="100,100">
+&lt;div class=&quot;progress-bar progress-100&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;scene-text&quot;&gt; Die Folgen sind vielfältig: ein wütender Her Weber, verunsicherte Kunden, finanzielle Schäden, hoher interner Aufwand, Reputationsschäden sowie mögliche persönliche Konsequenzen. &lt;/div&gt;
-
-&lt;div class=&quot;comic-panel&quot;&gt;
+&lt;div class=&quot;scene-text&quot;&gt; Die Folgen sind vielfältig: ein wütender Her Weber, verunsicherte Kunden, finanzielle Schäden, hoher interner Aufwand, Reputationsschäden sowie mögliche persönliche Konsequenzen. &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
   &lt;img src=&quot;Comic_Panels/P27.png&quot;&gt;
 
   &lt;div class=&quot;choice-overlay&quot;&gt;
