@@ -323,6 +323,21 @@ tw-story {
   margin-bottom: 22px;
 }
 
+.locked-next {
+  width: fit-content;
+  margin: 20px auto 18px auto;
+  padding: 16px 20px;
+
+  background: #2a3544;
+  border: 2px solid #5f7c99;
+  border-radius: 14px;
+
+  color: #8fa8c4;
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: bold;
+}
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header" color="blue"></tw-tag><tw-passagedata pid="1" name="Start" tags="" position="250,575" size="100,100">
 &lt;div class=&quot;progress-bar progress-0&quot;&gt;&lt;/div&gt;
@@ -1534,119 +1549,170 @@ Vielen Dank für Ihre Unterstützung!
 
 (link:&quot;← Zurück&quot;)[(undo:)]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="Zum Quiz" tags="" position="5675,375" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Zum Abschluss: Ein kleines Quiz&lt;/h3&gt;
-&lt;h4&gt;Können Sie die verdächtigen Adressen erkennen?&lt;/h4&gt; Prüfen Sie die folgenden E-Mail-Adressen. Entscheiden Sie jeweils, ob die Adresse **legitim** oder **verdächtig** ist
-
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="Zum Quiz" tags="" position="5675,375" size="100,100">(set: $mail1Beantwortet to false)
+(set: $mail2Beantwortet to false)
+(set: $mail3Beantwortet to false)
+&lt;div class=&quot;scene-text&quot; style=&quot;margin-top: -120px;&quot;&gt;
+&lt;h3&gt;Zum Abschluss: Ein kleines Quiz&lt;/h3&gt;
+&lt;h4&gt;Können Sie die verdächtigen Adressen erkennen?&lt;/h4&gt; Prüfen Sie die folgenden E-Mail-Adressen. Entscheiden Sie jeweils, ob die Adresse **legitim** oder **verdächtig** ist.
 
 
 **1. elza@vrbank-a-oal-security.de**
 
 &lt;div class=&quot;quiz-buttons&quot;&gt;
 (link: &quot;✅ Legitim&quot;)[
+	(set: $mail1Beantwortet to true)
 	(replace: ?mail1)[
-		&lt;div class=&quot;quiz-feedback&quot;&gt;		**Leider falsch. Richtig wäre ⚠️ Verdächtig**
+		&lt;div class=&quot;quiz-feedback&quot; style=&quot;margin-top: 8px;&quot;&gt;
+		**Leider falsch. Richtig wäre ⚠️ Verdächtig**
 
 		Die richtige Domain lautet: **vrbank-a-oal.de**
 
-		Der Zusatz **security** soll vertrauenswürdig wirken, gehört aber nicht zur echten Domain der Bank
+		Der Zusatz **security** soll vertrauenswürdig wirken, gehört aber nicht zur echten Domain der Bank.
 
-		Auch **elza** am Anfang ist falsch. Richtig wäre **elsa**
-
+		Auch **elza** am Anfang ist falsch. Richtig wäre **elsa**.
 		&lt;/div&gt;
+	]
+	(replace: ?weiterMailQuiz)[
+		(if: $mail1Beantwortet and $mail2Beantwortet and $mail3Beantwortet)[
+			&lt;div class=&quot;choice-overlay&quot;&gt;[[Weiter mit Internetadressen]]&lt;/div&gt;
+		]
+		(else:)[
+			&lt;div class=&quot;locked-next&quot;&gt;Bitte beantworten Sie zuerst alle Fragen.&lt;/div&gt;
+		]
 	]
 ]
 
 (link: &quot;⚠️ Verdächtig&quot;)[
+	(set: $mail1Beantwortet to true)
 	(replace: ?mail1)[
-		&lt;div class=&quot;quiz-feedback&quot;&gt;		**Richtig, diese Adresse ist verdächtig**
+		&lt;div class=&quot;quiz-feedback&quot; style=&quot;margin-top: 8px;&quot;&gt;
+		**Richtig, diese Adresse ist verdächtig**
 
 		Die richtige Domain lautet: **vrbank-a-oal.de**
 
-		Der Zusatz **security** soll vertrauenswürdig wirken, gehört aber nicht zur echten Domain der Bank
+		Der Zusatz **security** soll vertrauenswürdig wirken, gehört aber nicht zur echten Domain der Bank.
 
-		Auch **elza** am Anfang ist falsch. Richtig wäre **elsa**
-
+		Auch **elza** am Anfang ist falsch. Richtig wäre **elsa**.
 		&lt;/div&gt;
 	]
+	(replace: ?weiterMailQuiz)[
+		(if: $mail1Beantwortet and $mail2Beantwortet and $mail3Beantwortet)[
+			&lt;div class=&quot;choice-overlay&quot;&gt;[[Weiter mit Internetadressen]]&lt;/div&gt;
+		]
+		(else:)[
+			&lt;div class=&quot;locked-next&quot;&gt;Bitte beantworten Sie zuerst alle Fragen.&lt;/div&gt;
+		]
+	]
 ]
-&lt;/div&gt;
-
-|mail1&gt;[]
+&lt;/div&gt;|mail1&gt;[]
 
 
 **2. elsa@vrbank-a-oal.de**
 
 &lt;div class=&quot;quiz-buttons&quot;&gt;
 (link: &quot;✅ Legitim&quot;)[
+	(set: $mail2Beantwortet to true)
 	(replace: ?mail2)[
-		&lt;div class=&quot;quiz-feedback&quot;&gt;		**Richtig, diese Adresse ist legitim**
+		&lt;div class=&quot;quiz-feedback&quot; style=&quot;margin-top: 8px;&quot;&gt;
+		**Richtig, diese Adresse ist legitim**
 
 		Die Adresse nutzt die echte Domain: **vrbank-a-oal.de**
 
-		Dies ist die echte E-Mail-Adresse der IT für die Filiale
-
+		Dies ist die echte E-Mail-Adresse der IT für die Filiale.
 		&lt;/div&gt;
+	]
+	(replace: ?weiterMailQuiz)[
+		(if: $mail1Beantwortet and $mail2Beantwortet and $mail3Beantwortet)[
+			&lt;div class=&quot;choice-overlay&quot;&gt;[[Weiter mit Internetadressen]]&lt;/div&gt;
+		]
+		(else:)[
+			&lt;div class=&quot;locked-next&quot;&gt;Bitte beantworten Sie zuerst alle Fragen.&lt;/div&gt;
+		]
 	]
 ]
 
 (link: &quot;⚠️ Verdächtig&quot;)[
+	(set: $mail2Beantwortet to true)
 	(replace: ?mail2)[
-		&lt;div class=&quot;quiz-feedback&quot;&gt; **Leider falsch. Diese Adresse ist legitim**
+		&lt;div class=&quot;quiz-feedback&quot; style=&quot;margin-top: 8px;&quot;&gt;
+		**Leider falsch. Diese Adresse ist legitim**
 
 		Die Adresse nutzt die echte Domain: **vrbank-a-oal.de**
 
-		Dies ist die echte E-Mail-Adresse der IT für die Filiale
-
+		Dies ist die echte E-Mail-Adresse der IT für die Filiale.
 		&lt;/div&gt;
 	]
+	(replace: ?weiterMailQuiz)[
+		(if: $mail1Beantwortet and $mail2Beantwortet and $mail3Beantwortet)[
+			&lt;div class=&quot;choice-overlay&quot;&gt;[[Weiter mit Internetadressen]]&lt;/div&gt;
+		]
+		(else:)[
+			&lt;div class=&quot;locked-next&quot;&gt;Bitte beantworten Sie zuerst alle Fragen.&lt;/div&gt;
+		]
+	]
 ]
-&lt;/div&gt;
-
-|mail2&gt;[]
+&lt;/div&gt;|mail2&gt;[]
 
 
 **3. support@vrbank.de.security-check.com**
 
 &lt;div class=&quot;quiz-buttons&quot;&gt;
 (link: &quot;✅ Legitim&quot;)[
+	(set: $mail3Beantwortet to true)
 	(replace: ?mail3)[
-		&lt;div class=&quot;quiz-feedback&quot;&gt;			 **Leider falsch. Richtig wäre ⚠️ Verdächtig**
+		&lt;div class=&quot;quiz-feedback&quot; style=&quot;margin-top: 8px;&quot;&gt;
+		**Leider falsch. Richtig wäre ⚠️ Verdächtig**
 
 		Die Zieladresse lautet: **security-check.com**
 
-		Alles davor kann täuschend wirken
+		Alles davor kann täuschend wirken.
 
-		Auch die Endung **.com** ist ein Hinweis auf eine verdächtige E-Mail-Adresse
-
+		Auch die Endung **.com** ist ein Hinweis auf eine verdächtige E-Mail-Adresse.
 		&lt;/div&gt;
+	]
+	(replace: ?weiterMailQuiz)[
+		(if: $mail1Beantwortet and $mail2Beantwortet and $mail3Beantwortet)[
+			&lt;div class=&quot;choice-overlay&quot;&gt;[[Weiter mit Internetadressen]]&lt;/div&gt;
+		]
+		(else:)[
+			&lt;div class=&quot;locked-next&quot;&gt;Bitte beantworten Sie zuerst alle Fragen.&lt;/div&gt;
+		]
 	]
 ]
 
 (link: &quot;⚠️ Verdächtig&quot;)[
+	(set: $mail3Beantwortet to true)
 	(replace: ?mail3)[
-		&lt;div class=&quot;quiz-feedback&quot;&gt;		**Richtig, diese Adresse ist verdächtig**
+		&lt;div class=&quot;quiz-feedback&quot; style=&quot;margin-top: 8px;&quot;&gt;
+		**Richtig, diese Adresse ist verdächtig**
 
 		Die Zieladresse lautet: **security-check.com**
 
-		Alles davor kann täuschend wirken
+		Alles davor kann täuschend wirken.
 
-		Auch die Endung **.com** ist ein Hinweis auf eine verdächtige E-Mail-Adresse
-
+		Auch die Endung **.com** ist ein Hinweis auf eine verdächtige E-Mail-Adresse.
 		&lt;/div&gt;
 	]
+	(replace: ?weiterMailQuiz)[
+		(if: $mail1Beantwortet and $mail2Beantwortet and $mail3Beantwortet)[
+			&lt;div class=&quot;choice-overlay&quot;&gt;[[Weiter mit Internetadressen]]&lt;/div&gt;
+		]
+		(else:)[
+			&lt;div class=&quot;locked-next&quot;&gt;Bitte beantworten Sie zuerst alle Fragen.&lt;/div&gt;
+		]
+	]
 ]
-&lt;/div&gt;
-
-|mail3&gt;[]
-
-
-&lt;div class=&quot;choice-overlay&quot;&gt; 
-[[Weiter mit Internetadressen]] 
-&lt;/div&gt; &lt;/div&gt;
-
-</tw-passagedata><tw-passagedata pid="60" name="Weiter mit Internetadressen" tags="" position="5850,450" size="100,100">&lt;div class=&quot;scene-text&quot;&gt; &lt;h3&gt;Quiz: Internetadressen prüfen&lt;/h3&gt;
-&lt;h4&gt;Können Sie die verdächtigen Internetadressen erkennen?&lt;/h4&gt; Prüfen Sie die folgenden Internetadressen. Entscheiden Sie jeweils, ob die Adresse **legitim** oder **verdächtig** ist
-
+&lt;/div&gt;|mail3&gt;[]
+|weiterMailQuiz&gt;[
+	&lt;div class=&quot;locked-next&quot;&gt;Bitte beantworten Sie zuerst alle Fragen.&lt;/div&gt;
+] &lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="60" name="Weiter mit Internetadressen" tags="" position="5850,450" size="100,100">(set: $url1Beantwortet to false)
+(set: $url2Beantwortet to false)
+(set: $url3Beantwortet to false)
+&lt;div class=&quot;scene-text&quot; style=&quot;margin-top: -120px;&quot;&gt;
+&lt;h3&gt;Quiz: Internetadressen prüfen&lt;/h3&gt;
+&lt;h4&gt;Können Sie die verdächtigen Internetadressen erkennen?&lt;/h4&gt; Prüfen Sie die folgenden Internetadressen. Entscheiden Sie jeweils, ob die Adresse **legitim** oder **verdächtig** ist.
 
 
 **1. Welche Zieladresse steckt in dieser Internetadresse?**
@@ -1655,126 +1721,183 @@ Vielen Dank für Ihre Unterstützung!
 
 &lt;div class=&quot;quiz-buttons&quot;&gt;
 (link: &quot;service.vrbank-a-oal.de&quot;)[
+	(set: $url1Beantwortet to true)
 	(replace: ?url1)[
-		&lt;div class=&quot;quiz-feedback&quot;&gt;		⚠️ **Nicht ganz**
+		&lt;div class=&quot;quiz-feedback&quot; style=&quot;margin-top: 8px;&quot;&gt;
+		⚠️ **Nicht ganz**
 
-		**service.vrbank-a-oal.de** wirkt zwar legitim, ist aber nicht die eigentliche Zieladresse
+		**service.vrbank-a-oal.de** wirkt zwar legitim, ist aber nicht die eigentliche Zieladresse.
 
 		Die Zieladresse lautet: **kundenportal-login.com**. Alles davor kann täuschend wirken.
         
 		Erinnern Sie sich: Entscheidend ist nicht der Anfang der Adresse, sondern die eigentliche Zieladresse. Gehen Sie von https:// nach rechts bis zum ersten Slash /. Gehen Sie dann nach links bis zum ersten Punkt. Gehen Sie anschließend noch weiter nach links bis zum nächsten Punkt. Alles zwischen diesem zweiten Punkt und dem ersten Slash gehört immer zur Zieladresse.
 		&lt;/div&gt;
+	]
+	(replace: ?weiterUrlQuiz)[
+		(if: $url1Beantwortet and $url2Beantwortet and $url3Beantwortet)[
+			&lt;div class=&quot;choice-overlay&quot;&gt;[[ENDE]]&lt;/div&gt;
+		]
+		(else:)[
+			&lt;div class=&quot;locked-next&quot;&gt;Bitte beantworten Sie zuerst alle Fragen.&lt;/div&gt;
+		]
 	]
 ]
 
 (link: &quot;vrbank-a-oal.de&quot;)[
+	(set: $url1Beantwortet to true)
 	(replace: ?url1)[
-		&lt;div class=&quot;quiz-feedback&quot;&gt;		⚠️ **Nicht ganz**
+		&lt;div class=&quot;quiz-feedback&quot; style=&quot;margin-top: 8px;&quot;&gt;
+		⚠️ **Nicht ganz**
 
-		Die echte Bankdomain **vrbank-a-oal.de** kommt zwar in der Adresse vor, ist hier aber nicht die eigentliche Zieladresse
+		Die echte Bankdomain **vrbank-a-oal.de** kommt zwar in der Adresse vor, ist hier aber nicht die eigentliche Zieladresse.
 
 		Die Zieladresse lautet: **kundenportal-login.com**. Alles davor kann täuschend wirken.
         
 		Erinnern Sie sich: Entscheidend ist nicht der Anfang der Adresse, sondern die eigentliche Zieladresse. Gehen Sie von https:// nach rechts bis zum ersten Slash /. Gehen Sie dann nach links bis zum ersten Punkt. Gehen Sie anschließend noch weiter nach links bis zum nächsten Punkt. Alles zwischen diesem zweiten Punkt und dem ersten Slash gehört immer zur Zieladresse.
 		&lt;/div&gt;
+	]
+	(replace: ?weiterUrlQuiz)[
+		(if: $url1Beantwortet and $url2Beantwortet and $url3Beantwortet)[
+			&lt;div class=&quot;choice-overlay&quot;&gt;[[ENDE]]&lt;/div&gt;
+		]
+		(else:)[
+			&lt;div class=&quot;locked-next&quot;&gt;Bitte beantworten Sie zuerst alle Fragen.&lt;/div&gt;
+		]
 	]
 ]
 
 (link: &quot;kundenportal-login.com&quot;)[
+	(set: $url1Beantwortet to true)
 	(replace: ?url1)[
-		&lt;div class=&quot;quiz-feedback&quot;&gt;		✅ **Richtig**
+		&lt;div class=&quot;quiz-feedback&quot; style=&quot;margin-top: 8px;&quot;&gt;
+		✅ **Richtig**
 
 		Die Zieladresse lautet: **kundenportal-login.com**. Alles davor kann täuschend wirken.
         
 		Erinnern Sie sich: Entscheidend ist nicht der Anfang der Adresse, sondern die eigentliche Zieladresse. Gehen Sie von https:// nach rechts bis zum ersten Slash /. Gehen Sie dann nach links bis zum ersten Punkt. Gehen Sie anschließend noch weiter nach links bis zum nächsten Punkt. Alles zwischen diesem zweiten Punkt und dem ersten Slash gehört immer zur Zieladresse.
-
 		&lt;/div&gt;
 	]
+	(replace: ?weiterUrlQuiz)[
+		(if: $url1Beantwortet and $url2Beantwortet and $url3Beantwortet)[
+			&lt;div class=&quot;choice-overlay&quot;&gt;[[ENDE]]&lt;/div&gt;
+		]
+		(else:)[
+			&lt;div class=&quot;locked-next&quot;&gt;Bitte beantworten Sie zuerst alle Fragen.&lt;/div&gt;
+		]
+	]
 ]
-&lt;/div&gt;
-
-|url1&gt;[]
+&lt;/div&gt;|url1&gt;[]
 
 
-**2. Legitim oder nicht? 
-https:&amp;#47;&amp;#47;www.vrbank-security.com/login**
+**2. Legitim oder nicht?**  
+**https:&amp;#47;&amp;#47;www.vrbank-security.com/login**
 
 &lt;div class=&quot;quiz-buttons&quot;&gt;
 (link: &quot;✅ Legitim&quot;)[
+	(set: $url2Beantwortet to true)
 	(replace: ?url2)[
-		&lt;div class=&quot;quiz-feedback&quot;&gt;		**Leider falsch. Richtig wäre ⚠️ Verdächtig**
+		&lt;div class=&quot;quiz-feedback&quot; style=&quot;margin-top: 8px;&quot;&gt;
+		**Leider falsch. Richtig wäre ⚠️ Verdächtig**
 
-		Die Adresse enthält zwar **vrbank**, gehört dadurch aber nicht automatisch zur echten Bank
+		Die Adresse enthält zwar **vrbank**, gehört dadurch aber nicht automatisch zur echten Bank.
 
-		Der Zusatz **security** ist auffällig und soll vertrauenswürdig wirken
+		Der Zusatz **security** ist auffällig und soll vertrauenswürdig wirken.
 
-		Auch die Endung **.com** ist ein weiterer Hinweis auf eine verdächtige Adresse
-
+		Auch die Endung **.com** ist ein weiterer Hinweis auf eine verdächtige Adresse.
 		&lt;/div&gt;
+	]
+	(replace: ?weiterUrlQuiz)[
+		(if: $url1Beantwortet and $url2Beantwortet and $url3Beantwortet)[
+			&lt;div class=&quot;choice-overlay&quot;&gt;[[ENDE]]&lt;/div&gt;
+		]
+		(else:)[
+			&lt;div class=&quot;locked-next&quot;&gt;Bitte beantworten Sie zuerst alle Fragen.&lt;/div&gt;
+		]
 	]
 ]
 
 (link: &quot;⚠️ Verdächtig&quot;)[
+	(set: $url2Beantwortet to true)
 	(replace: ?url2)[
-		&lt;div class=&quot;quiz-feedback&quot;&gt;		**Richtig, diese Adresse ist verdächtig**
+		&lt;div class=&quot;quiz-feedback&quot; style=&quot;margin-top: 8px;&quot;&gt;
+		**Richtig, diese Adresse ist verdächtig**
 
-		Die Adresse enthält zwar **vrbank**, gehört dadurch aber nicht automatisch zur echten Bank
+		Die Adresse enthält zwar **vrbank**, gehört dadurch aber nicht automatisch zur echten Bank.
 
-		Der Zusatz **security** ist auffällig und soll vertrauenswürdig wirken
+		Der Zusatz **security** ist auffällig und soll vertrauenswürdig wirken.
 
-		Auch die Endung **.com** ist ein weiterer Hinweis auf eine verdächtige Adresse
-
+		Auch die Endung **.com** ist ein weiterer Hinweis auf eine verdächtige Adresse.
 		&lt;/div&gt;
 	]
+	(replace: ?weiterUrlQuiz)[
+		(if: $url1Beantwortet and $url2Beantwortet and $url3Beantwortet)[
+			&lt;div class=&quot;choice-overlay&quot;&gt;[[ENDE]]&lt;/div&gt;
+		]
+		(else:)[
+			&lt;div class=&quot;locked-next&quot;&gt;Bitte beantworten Sie zuerst alle Fragen.&lt;/div&gt;
+		]
+	]
 ]
-&lt;/div&gt;
-
-|url2&gt;[]
+&lt;/div&gt;|url2&gt;[]
 
 
-**3. Legitim oder nicht? 
-https:&amp;#47;&amp;#47;vrbank-augsburg-ostallgaeu.de.login.xyz**
+**3. Legitim oder nicht?**  
+**https:&amp;#47;&amp;#47;vrbank-augsburg-ostallgaeu.de.login.xyz**
 
 &lt;div class=&quot;quiz-buttons&quot;&gt;
 (link: &quot;✅ Legitim&quot;)[
+	(set: $url3Beantwortet to true)
 	(replace: ?url3)[
-		&lt;div class=&quot;quiz-feedback&quot;&gt;		 **Leider falsch. Richtig wäre ⚠️ Verdächtig**
+		&lt;div class=&quot;quiz-feedback&quot; style=&quot;margin-top: 8px;&quot;&gt;
+		**Leider falsch. Richtig wäre ⚠️ Verdächtig**
 
 		Die Zieladresse lautet: **login.xyz**
 
-		Der Teil davor, also **vrbank-augsburg-ostallgaeu.de**, soll nur legitim wirken
+		Der Teil davor, also **vrbank-augsburg-ostallgaeu.de**, soll nur legitim wirken.
 
-		Die Endung der Zieladresse ist **.xyz**
+		Die Endung der Zieladresse ist **.xyz**.
 
-		Das ist ein deutlicher Hinweis auf eine verdächtige Adresse
-
+		Das ist ein deutlicher Hinweis auf eine verdächtige Adresse.
 		&lt;/div&gt;
+	]
+	(replace: ?weiterUrlQuiz)[
+		(if: $url1Beantwortet and $url2Beantwortet and $url3Beantwortet)[
+			&lt;div class=&quot;choice-overlay&quot;&gt;[[ENDE]]&lt;/div&gt;
+		]
+		(else:)[
+			&lt;div class=&quot;locked-next&quot;&gt;Bitte beantworten Sie zuerst alle Fragen.&lt;/div&gt;
+		]
 	]
 ]
 
 (link: &quot;⚠️ Verdächtig&quot;)[
+	(set: $url3Beantwortet to true)
 	(replace: ?url3)[
-		&lt;div class=&quot;quiz-feedback&quot;&gt;		**Richtig, diese Adresse ist verdächtig**
+		&lt;div class=&quot;quiz-feedback&quot; style=&quot;margin-top: 8px;&quot;&gt;
+		**Richtig, diese Adresse ist verdächtig**
 
 		Die Zieladresse lautet: **login.xyz**
 
-		Der Teil davor, also **vrbank-augsburg-ostallgaeu.de**, soll nur legitim wirken
+		Der Teil davor, also **vrbank-augsburg-ostallgaeu.de**, soll nur legitim wirken.
 
-		Die Endung der Zieladresse ist **.xyz**
+		Die Endung der Zieladresse ist **.xyz**.
 
-		Das ist ein deutlicher Hinweis auf eine verdächtige Adresse
-
+		Das ist ein deutlicher Hinweis auf eine verdächtige Adresse.
 		&lt;/div&gt;
 	]
+	(replace: ?weiterUrlQuiz)[
+		(if: $url1Beantwortet and $url2Beantwortet and $url3Beantwortet)[
+			&lt;div class=&quot;choice-overlay&quot;&gt;[[ENDE]]&lt;/div&gt;
+		]
+		(else:)[
+			&lt;div class=&quot;locked-next&quot;&gt;Bitte beantworten Sie zuerst alle Fragen.&lt;/div&gt;
+		]
+	]
 ]
-&lt;/div&gt;
-
-|url3&gt;[]
-
-
-&lt;div class=&quot;choice-overlay&quot;&gt; 
-[[ENDE]] 
-&lt;/div&gt; &lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="Weiter zum Termin" tags="" position="1900,575" size="100,100">
+&lt;/div&gt;|url3&gt;[]
+|weiterUrlQuiz&gt;[
+	&lt;div class=&quot;locked-next&quot;&gt;Bitte beantworten Sie zuerst alle Fragen.&lt;/div&gt;
+] &lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="Weiter zum Termin" tags="" position="1900,575" size="100,100">
 &lt;div class=&quot;progress-bar progress-80&quot;&gt;&lt;/div&gt;
 
 &lt;div class=&quot;scene-text&quot;&gt; Mit etwas Verspätung macht sich Max nun auf den Weg zu seinem Termin mit Frau Schneider.  &lt;/div&gt; &lt;div class=&quot;comic-panel&quot;&gt;
